@@ -17,6 +17,32 @@
             background-color: #f44336;
             z-index: 100;
         }
+        .carousel-track {
+    width: max-content; /* Ensure cards align horizontally */
+}
+.carousel-card {
+    min-width: calc(100% / 2); /* Adjust for responsive breakpoints */
+}
+@media (min-width: 640px) {
+    .carousel-card {
+        min-width: calc(100% / 3); /* For larger screens */
+    }
+}
+
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-card {
+    flex: 0 0 100%; /* Each slide takes 100% of the width */
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+
     </style>
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
@@ -132,9 +158,9 @@
             <p class="text-gray-700 lg:ml-16 mt-4 lg:mt-0 max-w-lg text-base sm:text-lg">Manufacturers and all supply chain stakeholders ranging from C&F agents, Super Stockists, Dealers, Distributors, Stockists, Wholesalers, Retailers across.</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            <!-- Card 1 -->
-            <div class="flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up">
+        <!-- <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"> -->
+             <!-- Card 1 -->
+            <!-- <div class="flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up">
                 <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center icon-bg-gray rounded-full">
                     <img src="images/6.png" alt="B2B Networking Icon">
                 </div>
@@ -143,10 +169,10 @@
                     <p class="text-gray-600 text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <a href="#" class="text-blue-500 font-semibold mt-2 inline-block">Learn More &rarr;</a>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Card 2 -->
-            <div class="flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up">
+            <!-- <div class="flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up">
                 <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center icon-bg-yellow rounded-full">
                     <img src="images/7.png" alt="Retailytics Icon">
                 </div>
@@ -155,10 +181,10 @@
                     <p class="text-gray-600 text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <a href="#" class="text-blue-500 font-semibold mt-2 inline-block">Learn More &rarr;</a>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Card 3 -->
-            <div class="flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up">
+            <!-- <div class="flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up">
                 <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center icon-bg-blue rounded-full">
                     <img src="images/8.png" alt="Inventory Optimization Icon">
                 </div>
@@ -167,10 +193,10 @@
                     <p class="text-gray-600 text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <a href="#" class="text-blue-500 font-semibold mt-2 inline-block">Learn More &rarr;</a>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Card 4 -->
-            <div class="flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up">
+            <!-- <div class="flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300" data-aos="fade-up">
                 <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center icon-bg-green rounded-full">
                     <img src="images/9.png" alt="Sales Channel Development Icon">
                 </div>
@@ -180,13 +206,146 @@
                     <a href="#" class="text-blue-500 font-semibold mt-2 inline-block">Learn More &rarr;</a>
                 </div>
             </div>
+        </div>  -->
+
+
+
+        <div id="carousel" class="relative overflow-hidden">
+            <div class="carousel-track flex transition-transform duration-300">
+                <!-- Card 1 -->
+                <div class="carousel-card flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center icon-bg-gray rounded-full">
+                        <img src="images/6.png" alt="B2B Networking Icon">
+                    </div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-semibold">B2B Networking</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="text-blue-500 font-semibold mt-2 inline-block">Learn More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="carousel-card flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center icon-bg-yellow rounded-full">
+                        <img src="images/7.png" alt="Retailytics Icon">
+                    </div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-semibold">Retailytics</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="text-blue-500 font-semibold mt-2 inline-block">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="carousel-card flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center icon-bg-yellow rounded-full">
+                        <img src="images/8.png" alt="">
+                    </div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-semibold">Inventory Optimization Icon</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="text-blue-500 font-semibold mt-2 inline-block">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="carousel-card flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center icon-bg-yellow rounded-full">
+                        <img src="images/9.png" alt="Sales Channel Development Icon">
+                    </div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-semibold">Sales Channel Development Icon</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="text-blue-500 font-semibold mt-2 inline-block">Learn More &rarr;</a>
+                    </div>
+                </div>
+               
+            </div>
+
+
+                <!-- Add more cards as needed -->
+        <!-- </div> -->
+        
+            <!-- Optional Controls -->
+            <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 shadow-md">
+                &larr;
+            </button>
+            <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 shadow-md">
+                &rarr;
+            </button>
         </div>
+        
+        
+
+
+
     </section>
 
     <!-- AOS Animation Script -->
+     <script>
+       document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const cards = document.querySelectorAll('.carousel-card');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    let currentIndex = 0;
+    const slideDuration = 3000; // Duration in milliseconds (3 seconds)
+    let isTransitioning = false; // Prevent mid-transition updates
+
+    const updateCarousel = () => {
+        const containerWidth = track.parentElement.getBoundingClientRect().width; // Get carousel container width
+        track.style.transition = 'transform 0.5s ease'; // Smooth sliding
+        track.style.transform = `translateX(-${currentIndex * containerWidth}px)`;
+
+        // Wait for the transition to complete
+        setTimeout(() => {
+            isTransitioning = false;
+        }, 500); // Match transition duration
+    };
+
+    const goToNextSlide = () => {
+        if (isTransitioning) return; // Prevent interrupting transitions
+        isTransitioning = true;
+        currentIndex = (currentIndex + 1) % cards.length; // Loop to the first card after the last
+        updateCarousel();
+    };
+
+    const goToPrevSlide = () => {
+        if (isTransitioning) return; // Prevent interrupting transitions
+        isTransitioning = true;
+        currentIndex = (currentIndex - 1 + cards.length) % cards.length; // Loop to the last card if at the first
+        updateCarousel();
+    };
+
+    // Set up event listeners for manual controls
+    nextButton.addEventListener('click', () => {
+        clearInterval(slideInterval); // Reset the timer
+        goToNextSlide();
+    });
+
+    prevButton.addEventListener('click', () => {
+        clearInterval(slideInterval); // Reset the timer
+        goToPrevSlide();
+    });
+
+    // Start the slideshow
+    let slideInterval = setInterval(goToNextSlide, slideDuration);
+
+    // Resize listener to handle responsive adjustments
+    window.addEventListener('resize', () => {
+        track.style.transition = 'none'; // Disable transitions during resize
+        updateCarousel(); // Adjust slide width
+    });
+
+    // Initial alignment
+    updateCarousel();
+});
+
+
+     </script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
+
+
     </script>
 </body>
 
