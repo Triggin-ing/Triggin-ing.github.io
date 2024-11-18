@@ -1,11 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Sign Up</title>
+  <style>
+    /* General styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Container */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #c9d6eb, #d0e7e7);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Shared Styles */
+    .container h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .container p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .input-group input:focus {
+      border-color: #f44336;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px 20px;
+      background: #f44336;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #f44336;
+    }
+
+    /* Links */
+    .link {
+      font-size: 14px;
+      color: #666;
+      margin-top: 20px; /* Add spacing above the links */
+    }
+
+    .link a {
+      color: #f44336;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .link a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <h1>Login</h1>
+  <div class="container" id="auth-container">
+    <!-- Login Page -->
+    <div id="login-page">
+      <h2>Welcome Back</h2>
+      <p>Log in to continue</p>
+      <form action="#" method="POST">
+        <div class="input-group">
+          <input type="email" id="login-email" placeholder="Email" required>
+        </div>
+        <div class="input-group">
+          <input type="password" id="login-password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn">Log In</button>
+      </form>
+      <p class="link">Don't have an account? <a href="#" id="go-to-signup">Sign Up</a></p>
+    </div>
+
+    <!-- Sign-Up Page -->
+    <div id="signup-page" style="display: none;">
+      <h2>Create an Account</h2>
+      <p>Join us today!</p>
+      <form action="#" method="POST">
+        <div class="input-group">
+          <input type="text" id="signup-name" placeholder="Full Name" required>
+        </div>
+        <div class="input-group">
+          <input type="email" id="signup-email" placeholder="Email" required>
+        </div>
+        <div class="input-group">
+          <input type="password" id="signup-password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+      <p class="link">Already have an account? <a href="#" id="go-to-login">Log In</a></p>
+    </div>
+  </div>
+
+  <script>
+    // Get references to the pages and links
+    const loginPage = document.getElementById('login-page');
+    const signupPage = document.getElementById('signup-page');
+    const goToSignup = document.getElementById('go-to-signup');
+    const goToLogin = document.getElementById('go-to-login');
+
+    // Show the sign-up page
+    goToSignup.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginPage.style.display = 'none';
+      signupPage.style.display = 'block';
+    });
+
+    // Show the login page
+    goToLogin.addEventListener('click', (e) => {
+      e.preventDefault();
+      signupPage.style.display = 'none';
+      loginPage.style.display = 'block';
+    });
+  </script>
 </body>
 </html>
