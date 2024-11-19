@@ -3,9 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          
+        }
+
+        body {
+            /* background-color: #ddeef4; */
+            font-family: Arial, sans-serif;
+            /* background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover; */
+            color: #000000;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            /* background-color:  #d5f4ff; */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 900px;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .left, .right {
+            flex: 0 0 40%;
+            padding: 20px;
+        }
+
+        .left h2, .right h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        .details {
+            list-style: none;
+        }
+
+        .details li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .details li i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .details a {
+            color: #090909;
+            text-decoration: none;
+        }
+
+        .details a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        form .input-group {
+            margin-bottom: 15px;
+        }
+
+        form label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+        }
+
+        form textarea {
+            resize: none;
+        }
+
+        form button {
+            background: #f44336;
+            color: #000000;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        form button:hover {
+            background:#f44336;
+        }
+    </style>
 </head>
 <body>
-    <h1>Contact</h1>
+   
+    <div class="container bg-blue-50">
+        <!-- Left Section -->
+        <div class="left">
+            <h2>Contact Us</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <ul class="details">
+                <!-- <li><i>🏠</i> Address: 4671 Sugar Camp Road, Owatonna, Minnesota, 55060</li> -->
+                <li><i>📞</i> Phone: <a href="tel:+15714572321">+91 9988776655</a></li>
+                <li><i>✉</i> Email: <a href="mailto:ntamerwael@mfano.ga">triggin@gmail.com</a></li>
+                <li><i>📸</i> Instagram: <a href="https://instagram.com/username" target="_blank">@triggin</a></li>
+                <li><i>🐦</i> Twitter: <a href="https://twitter.com/username" target="_blank">@triggin</a></li>
+            </ul>
+        </div>
+        
+        <!-- Right Section -->
+        <div class="right">
+            <h2>Send Message</h2>
+            <form>
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Type your message..." required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+   
 </body>
 </html>

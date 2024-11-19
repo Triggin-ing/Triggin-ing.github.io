@@ -1,12 +1,180 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>How It Works - Triggin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .left, .right {
+            flex: 0 0 40%;
+            padding: 20px;
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        .right img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .title {
+            font-size: 2rem;
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .steps, .features {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: #333;
+        }
+
+        .steps li, .features li {
+            margin-bottom: 10px;
+        }
+
+        .features {
+            justify-content:center ;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .features li {
+             flex: 1 0 78%; 
+            /*Features split into two columns */
+            /* display: flex; */
+            padding: 5px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cta-section a {
+            text-decoration: none;
+            background: #0056b3;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .cta-section a:hover {
+            background: #003d80;
+        }
+
+        @media (max-width: 768px) {
+            .left, .right {
+                flex: 0 0 100%;
+                text-align: center;
+            }
+
+            .features li {
+                flex: 0 0 100%; /* Features stack on smaller screens */
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>How to work</h1>
+    <div class="container">
+        <!-- How It Works Section -->
+        <section class="section">
+            <div class="left">
+                <h1 class="title">How It Works</h1>
+                <p class="description">
+                    Triggin streamlines your supply chain processes through an intelligent and interactive platform. Here’s how it helps:
+                </p>
+                <ul class="steps">
+                    <li>Add your products to the platform for easy visibility by buyers.</li>
+                    <li>Manage real-time orders, invoices, and payments effortlessly.</li>
+                    <li>Generate custom analytics and dashboards for better decision-making.</li>
+                    <li>Streamline operational workflows with one-click systems.</li>
+                </ul>
+            </div>
+            <div class="right">
+                <img src="../images/5.png" alt="How It Works Illustration">
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section">
+            <div class="left">
+                <img src="../images/2.png" alt="Features Illustration">
+            </div>
+            <div class="right">
+                <h2 class="title">Our Features</h2>
+                <p class="description">Explore some of the powerful features that Triggin offers:</p>
+                <ul class="features">
+                    <li>Customizable dashboards for real-time insights.</li>
+                    <li>Hierarchical systems for better team management.</li>
+                    <li>Embedded analytics for data-driven decisions.</li>
+                    <li>Always synchronized data for accurate updates.</li>
+                </ul>
+            </div>
+            
+        </section>
+
+        <!-- Services Section -->
+        <section class="section">
+            <div class="left">
+                <h2 class="title">Services We Offer</h2>
+                <p class="description">
+                    Whether you're a startup, SME, or large business, Triggin provides solutions tailored to your needs:
+                </p>
+                <ul class="steps">
+                    <li>B2B Networking to enhance collaborations.</li>
+                    <li>Supply chain solutions for end-to-end integration.</li>
+                    <li>Retail analytics to optimize product placement and sales.</li>
+                    <li>Advanced analytics for forecasting and performance tracking.</li>
+                </ul>
+            </div>
+            <div class="right">
+                <img src="../images/4.png" alt="Services Illustration">
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <a href="contact-us.html">Contact Us</a>
+        </div>
+    </div>
 </body>
 </html>
