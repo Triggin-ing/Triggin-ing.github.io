@@ -1,0 +1,28 @@
+Processor.html
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Processor Page</title>
+</head>
+<body>
+  <h2>Form Data Received:</h2>
+  <script type="text/javascript">
+    // Get query string from the URL
+    var queryString = window.location.search;
+
+    
+    var queryStringParams = new URLSearchParams(queryString);
+
+    var studentName = queryStringParams.get("txtstudentname");
+    var password = queryStringParams.get("txtpassword"); 
+    var email = queryStringParams.get("txtemail");
+    var gender = queryStringParams.get("gender");
+
+  
+    document.write("<p>Student name: " + studentName + "</p>");
+    document.write("<p>Password: " + password + "</p>"); 
+    document.write("<p>Email: " + email + "</p>");
+    document.write("<p>Gender: " + gender + "</p>");
+  </script></body></html>
