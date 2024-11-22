@@ -24,7 +24,17 @@
         <!-- Desktop Navigation Links -->
         <nav  data-aos="zoom-out" data-aos-duration="2000" class="hidden md:flex space-x-4 sm:space-x-6">
             <a href="triggin/work.html" class="text-gray-600 hover:text-blue-600">How it Works</a>
-            <a href="triggin/resources.html" class="text-gray-600 hover:text-blue-600">Resources</a>
+           <div class="dropdown">
+            <h3 class="dropdown-txt" >Resources</h3>
+           
+                <div class="dropdown-content">
+                    <a href="events.html">Events</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="productUpdates.html">Webinars</a>
+                  </div>
+        </div>
+            
+            <!-- <a href="triggin/resources.html" class="text-gray-600 hover:text-blue-600">Resources</a> -->
             <a href="triggin/pricing.html" class="text-gray-600 hover:text-blue-600">Pricing</a>
             <a href="triggin/contact.html" class="text-gray-600 hover:text-blue-600">Contact Us</a>
             <a href="triggin/login.html" class="text-gray-600 hover:text-blue-600">Login</a>
@@ -47,7 +57,28 @@
     <nav id="mobile-menu" class="md:hidden bg-white shadow-md hidden">
         <div class="flex flex-col space-y-2 p-4">
             <a href="triggin/work.html" class="text-gray-600 hover:text-blue-600">How it Works</a>
-            <a href="triggin/resources.html" class="text-gray-600 hover:text-blue-600">Resources</a>
+
+            <div class="relative group">
+                <a href="triggin/resources.html" class="text-gray-600 hover:text-blue-600 flex items-center">
+                  Resources
+                  <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </a>
+                <div
+                  class="absolute left-0 mt-2 w-40 bg-white border border-gray-200 shadow-lg rounded-md hidden group-hover:block">
+                  <a href="triggin/blogs.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">
+                    Blogs
+                  </a>
+                  <a href="triggin/case-studies.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">
+                    Case Studies
+                  </a>
+                  <a href="triggin/tutorials.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">
+                    Tutorials
+                  </a>
+                </div>
+              </div>
+           <!-- <a href="triggin/resources.html" class="text-gray-600 hover:text-blue-600 ">Resources</a> -->
             <a href="triggin/pricing.html" class="text-gray-600 hover:text-blue-600">Pricing</a>
             <a href="triggin/contact.html" class="text-gray-600 hover:text-blue-600">Contact Us</a>
             <a href="triggin/login.html" class="text-gray-600 hover:text-blue-600">Login</a>
@@ -57,7 +88,14 @@
 </header>
 
 <!-- JavaScript for Mobile Menu Toggle -->
+<script>
+     const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
 
+    mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+</script>
 
     <!-- Hero Section -->
 
@@ -104,8 +142,8 @@
             <section id="carousel2" class="carousel-container relative overflow-hidden">
                 <div class="carousel-track flex transition-transform duration-300">
                     <!-- Image 1 -->
-                    <div class="carousel-card p-4 sm:p-6 bg-white-100 rounded shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <img src="images/1.png" class="mx-auto mb-4">
+                    <div class="carousel-card p-4 sm:p-6 bgwhite-100 rounded shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <img src="images/1.png" alt="SMBs Icon" class="mx-auto mb-4">
                     </div>
             
                     <!-- Other Images -->
@@ -355,10 +393,10 @@
 <html>
 
 <body class="bg-white-100">
-    <body >
+   
 
         <!-- Unique Features Section -->
-        <section style="padding: 40px; background-color: #f9fafc; text-align: center;">
+        <section style="padding: 40px; background-color: #ffffff; text-align: center;">
             <h2 style="font-size: 2em; font-weight: 600; margin-bottom: 20px;">What are we Offering <br> Explore our features</h2>
     
             <div class="features-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
@@ -437,12 +475,12 @@
                 }
             }
         </style> -->
-    </body>
+  
     
     </section>
 
 </body>
-<body style="font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 20px;">
+<body style="font-family: Arial, sans-serif; background-color: #ffffff; padding: 20px;">
 
     <!-- Testimonials Section -->
     <section style="text-align: center; margin-bottom: 30px;">
@@ -506,7 +544,7 @@
                 </div>
                 <p style="color: #7d7d7d;">© 2019 Oval</p>
             </div>
-
+c
             <!-- Navigation Links -->
             <div style="display: flex; flex: 2; gap: 20px; flex-wrap: wrap;">
                 

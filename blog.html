@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Triggin</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<style>
+    .dropdown {
+                position: relative;
+                display: inline-block;
+              }
+              
+              .dropdown-txt {
+                
+                color: rgb(87, 87, 87);
+               
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+              }
+              
+              .dropdown-btn:hover {
+                background-color: #0056b3;
+              }
+              
+              .dropdown-content {
+                
+                font-size: 14px;
+                display: none;
+                position: absolute;
+                background-color:#ffffff;
+                min-width: 100px;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                /* border-radius: 5px; */
+              }
+              
+              .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+              }
+              
+              .dropdown-content a:hover {
+                background-color: #e1ebf9;
+              }
+              
+              .dropdown:hover .dropdown-content {
+                display: block;
+              }
+</style>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center p-4 sm:p-6">
+            <!-- Logo -->
+            <a href="" class="text-xl sm:text-2xl font-bold text-gray-800">Triggin</a>
+    
+            <!-- Desktop Navigation Links -->
+            <nav  data-aos="zoom-out" data-aos-duration="2000" class="hidden md:flex space-x-4 sm:space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="triggin/work.html" class="text-gray-600 hover:text-blue-600">How it Works</a>
+               <div class="dropdown">
+                <h3 class="dropdown-txt" >Resources</h3>
+               
+                    <div class="dropdown-content">
+                        <a href="events.html">Events</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="productUpdates.html">Webinars</a>
+                      </div>
+            </div>
+                
+                <!-- <a href="triggin/resources.html" class="text-gray-600 hover:text-blue-600">Resources</a> -->
+                <a href="triggin/pricing.html" class="text-gray-600 hover:text-blue-600">Pricing</a>
+                <a href="triggin/contact.html" class="text-gray-600 hover:text-blue-600">Contact Us</a>
+                <a href="triggin/login.html" class="text-gray-600 hover:text-blue-600">Login</a>
+            </nav>
+    
+            <!-- Mobile Menu Button (Hamburger Icon) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+    
+            <!-- Try Triggin Button (Visible on all screen sizes) -->
+            <div class="hidden md:flex space-x-4">
+                <button class="bg-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded transition-all duration-300 transform hover:scale-105">Try Triggin</button>
+            </div>
+        </div>
+    
+        <!-- Mobile Navigation Menu -->
+        <nav id="mobile-menu" class="md:hidden bg-white shadow-md hidden">
+            <div class="flex flex-col space-y-2 p-4">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="triggin/work.html" class="text-gray-600 hover:text-blue-600">How it Works</a>
+    
+                <div class="dropdown">
+                    <h3 class="dropdown-txt" >Resources</h3>
+                   
+                        <div class="dropdown-content">
+                            <a href="events.html">Events</a>
+                            <a href="blog.html">Blog</a>
+                            <a href="productUpdates.html">Webinars</a>
+                          </div>
+                </div>
+               <!-- <a href="triggin/resources.html" class="text-gray-600 hover:text-blue-600 ">Resources</a> -->
+                <a href="triggin/pricing.html" class="text-gray-600 hover:text-blue-600">Pricing</a>
+                <a href="triggin/contact.html" class="text-gray-600 hover:text-blue-600">Contact Us</a>
+                <a href="triggin/login.html" class="text-gray-600 hover:text-blue-600">Login</a>
+                <button class="bg-red-500 text-white px-4 py-2 rounded transition-all duration-300 transform hover:scale-105">Try Triggin</button>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+         const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+    
+        mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+  <header class="bg-blue-600 text-white p-4">
+
+    
+
+    <h1 class="text-2xl font-bold">Our Blog</h1>
+  </header>
+  <main class="p-6">
+    <div class="space-y-6">
+      <div class="p-4 bg-white shadow rounded-md">
+        <h2 class="text-xl font-semibold">How Analytics Transforms Businesses</h2>
+        <p class="text-gray-600">Published: 1st November 2024</p>
+        <p>Learn how Triggin's analytics features have helped businesses streamline operations.</p>
+        <a href="#" class="text-blue-600 hover:underline">Read More</a>
+      </div>
+      <div class="p-4 bg-white shadow rounded-md">
+        <h2 class="text-xl font-semibold">The Future of Supply Chain</h2>
+        <p class="text-gray-600">Published: 15th November 2024</p>
+        <p>Explore the innovations shaping supply chains for the next decade.</p>
+        <a href="#" class="text-blue-600 hover:underline">Read More</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
