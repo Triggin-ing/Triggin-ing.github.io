@@ -1,0 +1,95 @@
+
+       
+        /* Scroll Progress Bar */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 5px;
+            background-color: #f44336;
+            z-index: 100;
+        }
+        .carousel-track {
+    width: max-content; /* Ensure cards align horizontally */
+}
+.carousel-card {
+    min-width: calc(100% / 2); /* Adjust for responsive breakpoints */
+}
+@media (min-width: 640px) {
+    .carousel-card {
+        min-width: calc(100% / 3); /* For larger screens */
+    }
+}
+
+.carousel-container {
+    position: relative;
+    width:100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    /* justify-content: center; */
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-card {
+    background-color: #e1ebf9;
+    flex: 0 0 100%; /* Each slide spans full width */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* .button{
+    transform: scale(1.1);
+
+} */
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes slideIn {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+            /* Responsive styling */
+            .features-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+    
+            /* Adjust grid layout for tablets and small laptops */
+            @media (max-width: 1024px) {
+                .features-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+    
+            /* Stack items vertically on small screens */
+            @media (max-width: 768px) {
+                .features-grid {
+                    grid-template-columns: 1fr;
+                }
+    
+                h2 {
+                    font-size: 1.8em;
+                }
+            }
+    
+            /* Text adjustments for extra small screens */
+            @media (max-width: 480px) {
+                h3 {
+                    font-size: 1em;
+                }
+    
+                p {
+                    font-size: 0.9em;
+                }
+            }
+        

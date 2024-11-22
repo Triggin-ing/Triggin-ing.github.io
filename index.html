@@ -7,58 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> <!-- AOS CSS for animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <style>
-       
-        /* Scroll Progress Bar */
-        #progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 5px;
-            background-color: #f44336;
-            z-index: 100;
-        }
-        .carousel-track {
-    width: max-content; /* Ensure cards align horizontally */
-}
-.carousel-card {
-    min-width: calc(100% / 2); /* Adjust for responsive breakpoints */
-}
-@media (min-width: 640px) {
-    .carousel-card {
-        min-width: calc(100% / 3); /* For larger screens */
-    }
-}
+    <link rel="stylesheet" href="style.css">
 
-.carousel-container {
-    position: relative;
-    width:100%;
-    overflow: hidden;
-}
-
-.carousel-track {
-    display: flex;
-    /* justify-content: center; */
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-}
-
-.carousel-card {
-    background-color: #e1ebf9;
-    flex: 0 0 100%; /* Each slide spans full width */
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-/* .button{
-    transform: scale(1.1);
-
-} */
-
-
-
-    </style>
 </head>
 <body class=" font-sans leading-normal tracking-normal" style="background-color: #ffffff;">
 
@@ -107,14 +57,7 @@
 </header>
 
 <!-- JavaScript for Mobile Menu Toggle -->
-<script>
-    const mobileMenuButton = document.getElementById("mobile-menu-button");
-    const mobileMenu = document.getElementById("mobile-menu");
 
-    mobileMenuButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-    });
-</script>
 
     <!-- Hero Section -->
 
@@ -272,62 +215,6 @@
 
     </section>
 
-    <!-- AOS Animation Script -->
-     <script>
-     document.addEventListener('DOMContentLoaded', () => {
-    const carousels = document.querySelectorAll('.carousel-container');
-
-    carousels.forEach((carousel) => {
-        const track = carousel.querySelector('.carousel-track');
-        const prevButton = carousel.querySelector('.carousel-prev');
-        const nextButton = carousel.querySelector('.carousel-next');
-        const slides = track.querySelectorAll('.carousel-card');
-
-        let currentIndex = 0;
-        const slideDuration = 2000; // 3 seconds
-        let isTransitioning = false;
-
-        const updateCarousel = () => {
-            const containerWidth = carousel.getBoundingClientRect().width;
-            track.style.transition = 'transform 0.5s ease';
-            track.style.transform = `translateX(-${currentIndex * containerWidth}px)`;
-
-            setTimeout(() => {
-                isTransitioning = false;
-            }, 500);
-        };
-
-        const goToNextSlide = () => {
-            if (isTransitioning) return;
-            isTransitioning = true;
-            currentIndex = (currentIndex + 1) % slides.length;
-            updateCarousel();
-        };
-
-        const goToPrevSlide = () => {
-            if (isTransitioning) return;
-            isTransitioning = true;
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-            updateCarousel();
-        };
-
-        nextButton.addEventListener('click', goToNextSlide);
-        prevButton.addEventListener('click', goToPrevSlide);
-
-        const autoSlide = setInterval(goToNextSlide, slideDuration);
-
-        [prevButton, nextButton].forEach((button) =>
-            button.addEventListener('click', () => clearInterval(autoSlide))
-        );
-
-        window.addEventListener('resize', updateCarousel);
-
-        updateCarousel();
-    });
-});
-
-
-     </script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
@@ -454,16 +341,7 @@
 
     <!-- Animation Script and Styles -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-        window.onscroll = function() {
-            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var scrollPercent = (scrollTop / docHeight) * 100;
-            document.getElementById('progress-bar').style.width = scrollPercent + '%';
-        };
-    </script>
-    <style>
+    <!-- <style>
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
@@ -472,7 +350,7 @@
             0% { transform: translateX(-100%); opacity: 0; }
             100% { transform: translateX(0); opacity: 1; }
         }
-    </style>
+    </style> -->
 </body>
 <html>
 
@@ -522,7 +400,7 @@
             </div>
         </section>
     
-        <style>
+        <!-- <style>
             /* Responsive styling */
             .features-grid {
                 display: grid;
@@ -558,7 +436,7 @@
                     font-size: 0.9em;
                 }
             }
-        </style>
+        </style> -->
     </body>
     
     </section>
@@ -678,6 +556,7 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
