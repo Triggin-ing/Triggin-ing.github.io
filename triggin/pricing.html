@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing | Triggin</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <style>
      .dropdown {
@@ -57,7 +58,7 @@
         <div class="container mx-auto flex justify-between items-center p-4 sm:p-6">
             <!-- Logo -->
             <a href="" class="flex items-center space-x-1">
-                <img data-aos="zoom-out" data-aos-duration="1000" src="images/Logo.jpeg.jpg" alt="Triggin Logo" class="h-12 w-12 "> <!-- Logo Image -->
+                <img data-aos="zoom-out" data-aos-duration="1000" src="../images/Logo.jpeg.jpg" alt="Triggin Logo" class="h-12 w-12 "> <!-- Logo Image -->
                 <span class="text-xl sm:text-2xl font-bold text-gray-800">Triggin</span> <!-- Company Name -->
               </a>
     
@@ -183,5 +184,11 @@
   <footer class="bg-gray-800 text-white p-4 mt-6">
     <p class="text-center">&copy; 2024 Triggin. All rights reserved.</p>
   </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset:1,
+    } );
+    </script>
 </body>
 </html>
