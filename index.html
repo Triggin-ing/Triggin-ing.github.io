@@ -49,7 +49,7 @@
 
         <!-- Try Triggin Button (Visible on all screen sizes) -->
         <div class="hidden md:flex space-x-4">
-            <button class="bg-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded transition-all duration-300 transform hover:scale-105">Try Triggin</button>
+            <button class="bg-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded transition-all duration-300 transform hover:scale-105"><a href="tryTriggin.html">Try Triggin</a></button>
         </div>
     </div>
 
@@ -57,32 +57,21 @@
     <nav id="mobile-menu" class="md:hidden bg-white shadow-md hidden">
         <div class="flex flex-col space-y-2 p-4">
             <a href="triggin/work.html" class="text-gray-600 hover:text-blue-600">How it Works</a>
-
-            <div class="relative group">
-                <a href="triggin/resources.html" class="text-gray-600 hover:text-blue-600 flex items-center">
-                  Resources
-                  <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </a>
-                <div
-                  class="absolute left-0 mt-2 w-40 bg-white border border-gray-200 shadow-lg rounded-md hidden group-hover:block">
-                  <a href="triggin/blogs.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">
-                    Blogs
-                  </a>
-                  <a href="triggin/case-studies.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">
-                    Case Studies
-                  </a>
-                  <a href="triggin/tutorials.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">
-                    Tutorials
-                  </a>
-                </div>
-              </div>
+            <div class="dropdown">
+                <h3 class="dropdown-txt" >Resources</h3>
+               
+                    <div class="dropdown-content">
+                        <a href="events.html">Events</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="productUpdates.html">Webinars</a>
+                      </div>
+            </div>
+            
            <!-- <a href="triggin/resources.html" class="text-gray-600 hover:text-blue-600 ">Resources</a> -->
             <a href="triggin/pricing.html" class="text-gray-600 hover:text-blue-600">Pricing</a>
             <a href="triggin/contact.html" class="text-gray-600 hover:text-blue-600">Contact Us</a>
             <a href="triggin/login.html" class="text-gray-600 hover:text-blue-600">Login</a>
-            <button class="bg-red-500 text-white px-4 py-2 rounded transition-all duration-300 transform hover:scale-105">Try Triggin</button>
+            <a href="tryTriggin.html"><button class="bg-red-500 text-white px-4 py-2 rounded transition-all duration-300 transform hover:scale-105"><a href="tryTriggin.html">Try Triggin</a> </button></a>
         </div>
     </nav>
 </header>
@@ -531,7 +520,7 @@
 <body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f4f8;">
 
     <!-- Footer Section -->
-    <footer style="background-color: #e1cba0; padding: 40px 20px;">
+    <footer style="background-color:#e1ebf9; padding: 40px 20px;">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
             
             <!-- Left Side: Brand and Social Media -->

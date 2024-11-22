@@ -1,12 +1,291 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Welcome to Triggin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background: #f4f4f9;
+        }
+        .dropdown {
+                position: relative;
+                display: inline-block;
+              }
+              
+              .dropdown-txt {
+                
+                color: rgb(87, 87, 87);
+               
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+              }
+              
+              .dropdown-btn:hover {
+                background-color: #0056b3;
+              }
+              
+              .dropdown-content {
+                
+                font-size: 14px;
+                display: none;
+                position: absolute;
+                background-color:#ffffff;
+                min-width: 100px;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                /* border-radius: 5px; */
+              }
+              
+              .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+              }
+              
+              .dropdown-content a:hover {
+                background-color: #e1ebf9;
+              }
+              
+              .dropdown:hover .dropdown-content {
+                display: block;
+              }
+
+        .happy {
+            background:#f35d52;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 2rem;
+            /* background-image: url('https://via.placeholder.com/1500x400');  */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .happy h1 {
+            margin: 0;
+            /* font-size: 2.5rem; */
+        }
+
+        .happy p {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #f44336;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+
+        .card img {
+            justify-content:center ;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .cta a {
+            text-decoration: none;
+            color: white;
+            background: #f44336;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer a {
+            color: #f35d52;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Try Triggin</h1>
+    <header class="bg-white  sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center p-4 sm:p-6">
+            <!-- Logo -->
+            <a href="" class="text-xl sm:text-2xl font-bold text-gray-800">Triggin</a>
+    
+            <!-- Desktop Navigation Links -->
+            <nav  data-aos="zoom-out" data-aos-duration="2000" class="hidden md:flex space-x-4 sm:space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="triggin/work.html" class="text-gray-600 hover:text-blue-600">How it Works</a>
+               <div class="dropdown">
+                <h3 class="dropdown-txt" >Resources</h3>
+               
+                    <div class="dropdown-content">
+                        <a href="events.html">Events</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="productUpdates.html">Webinars</a>
+                      </div>
+            </div>
+                
+                <!-- <a href="triggin/resources.html" class="text-gray-600 hover:text-blue-600">Resources</a> -->
+                <a href="triggin/pricing.html" class="text-gray-600 hover:text-blue-600">Pricing</a>
+                <a href="triggin/contact.html" class="text-gray-600 hover:text-blue-600">Contact Us</a>
+                <a href="triggin/login.html" class="text-gray-600 hover:text-blue-600">Login</a>
+            </nav>
+    
+            <!-- Mobile Menu Button (Hamburger Icon) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+    
+            <!-- Try Triggin Button (Visible on all screen sizes) -->
+            <div class="hidden md:flex space-x-4">
+                <button class="bg-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded transition-all duration-300 transform hover:scale-105">Try Triggin</button>
+            </div>
+        </div>
+    
+        <!-- Mobile Navigation Menu -->
+        <nav id="mobile-menu" class="md:hidden bg-white shadow-md hidden">
+            <div class="flex flex-col space-y-2 p-4">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="triggin/work.html" class="text-gray-600 hover:text-blue-600">How it Works</a>
+    
+                <div class="dropdown">
+                    <h3 class="dropdown-txt" >Resources</h3>
+                   
+                        <div class="dropdown-content">
+                            <a href="events.html">Events</a>
+                            <a href="blog.html">Blog</a>
+                            <a href="productUpdates.html">Webinars</a>
+                          </div>
+                </div>
+               <!-- <a href="triggin/resources.html" class="text-gray-600 hover:text-blue-600 ">Resources</a> -->
+                <a href="triggin/pricing.html" class="text-gray-600 hover:text-blue-600">Pricing</a>
+                <a href="triggin/contact.html" class="text-gray-600 hover:text-blue-600">Contact Us</a>
+                <a href="triggin/login.html" class="text-gray-600 hover:text-blue-600">Login</a>
+                <button class="bg-red-500 text-white px-4 py-2 rounded transition-all duration-300 transform hover:scale-105">Try Triggin</button>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+         const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+    
+        mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+    <header class="happy">
+        <h1>Welcome to Triggin</h1>
+        <p>Your Gateway to Smarter Business Decisions</p>
+    </header>
+
+    <section>
+        <h2>Why Choose Triggin?</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="/images/tt1.webp" alt="Anime insight">
+                <h3>Data-Driven Insights</h3>
+                <p>Make informed decisions with real-time analytics tailored to your business goals.</p>
+            </div>
+            <div class="card">
+                <img src="/images/tt2.jpg" alt="Anime integration">
+                <h3>Seamless Integration</h3>
+                <p>Works effortlessly with your existing tools for a hassle-free experience.</p>
+            </div>
+            <div class="card">
+                <img src="/images/tt3.png" alt="Anime communication">
+                <h3>Streamlined Communication</h3>
+                <p>Bridge gaps with a unified platform for better relationships and faster transactions.</p>
+            </div>
+            <div class="card">
+                <img src="/images/tt4.webp" alt="Anime solutions">
+                <h3>Customizable Solutions</h3>
+                <p>Tailored services to meet your unique business needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Our Offerings</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="/images/tt5.png" alt="Anime automation">
+                <h3>Smart Automation</h3>
+                <p>Enhance productivity with intelligent workflows and automation tools.</p>
+            </div>
+            <div class="card">
+                <img src="/images/tt6.webp" alt="Anime analytics">
+                <h3>Analytics & Reporting</h3>
+                <p>Gain actionable insights with dashboards and data visualization.</p>
+            </div>
+            <div class="card">
+                <img src="/images/tt7.webp" alt="Anime optimization">
+                <h3>Business Optimization</h3>
+                <p>Optimize processes with AI-driven strategies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>How It Works</h2>
+        <ol>
+            <li>Connect: Sign up and integrate your tools effortlessly.</li>
+            <li>Customize: Configure settings based on your needs.</li>
+            <li>Optimize: Adjust strategies in real-time for optimal results.</li>
+        </ol>
+    </section>
+
+    <div class="cta">
+        <a href="#">Sign Up Now</a>
+    </div>
+
+    <footer>
+        <p>© 2024 Triggin. All rights reserved. | <a href="mailto:contact@triggin.com">Contact Us</a></p>
+    </footer>
 </body>
+
 </html>
