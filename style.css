@@ -36,7 +36,7 @@
 }
 
 .carousel-card {
-    background-color: #e1ebf9;
+    background-color: #eff2f6;
     flex: 0 0 100%; /* Each slide spans full width */
     max-width: 100%;
     box-sizing: border-box;
@@ -132,7 +132,7 @@
               }
               
               .dropdown-content a:hover {
-                background-color: #e1ebf9;
+                background-color: #eff2f6;
               }
               
               .dropdown:hover .dropdown-content {
