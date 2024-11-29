@@ -73,3 +73,6 @@ carousels.forEach((carousel) => {
             document.getElementById('progress-bar').style.width = scrollPercent + '%';
         };
    
+
+
+       

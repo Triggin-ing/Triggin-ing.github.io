@@ -126,12 +126,132 @@
         </div>
     </section>
 
+
+
+    <section id="who-can-use" class="py-12 sm:py-16 bg-white" data-aos="fade-up">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+          <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">
+            Who can use <span class="text-red-500"><a href="start.html">Triggin</a></span> for business
+          </h2>
+          <p class="text-base sm:text-lg text-gray-700 mb-6">
+            Manufacturers and supply chain stakeholders ranging from C&F agents, super stockists, distributors, wholesalers, and retailers across any industry.
+          </p>
+      
+          <!-- Carousel Container -->
+          <div id="carousel-container" class="relative flex justify-center items-center space-x-6 overflow-hidden">
+            <!-- Previous Image -->
+            <div class="carousel-item scale-90 opacity-75 transition-all duration-500 ease-in-out">
+              <img src="images/5.png" alt="Prev Slide" class="w-40 h-40 sm:w-48 sm:h-48 rounded-full object-cover">
+              <p class="text-sm sm:text-base mt-2 opacity-50">Prev Image Text</p>
+            </div>
+            <!-- Current Image -->
+            <div class="carousel-item scale-100 transition-all duration-500 ease-in-out">
+              <img src="images/1.png" alt="Active Slide" class="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover border-4 border-light-blue-300">
+              <p class="text-sm sm:text-base mt-2 opacity-100">Current Image Text</p>
+            </div>
+            <!-- Next Image -->
+            <div class="carousel-item scale-90 opacity-75 transition-all duration-500 ease-in-out">
+              <img src="images/2.png" alt="Next Slide" class="w-40 h-40 sm:w-48 sm:h-48 rounded-full object-cover">
+              <p class="text-sm sm:text-base mt-2 opacity-50">Next Image Text</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <script>
+
+const carouselContainer = document.querySelector("#carousel-container");
+const slides = [
+  "images/1.png",
+  "images/2.png",
+  "images/3.png",
+  "images/4.png",
+  "images/5.png",
+]; // Array of images
+
+const textContent = [
+  "Startups ", // Text for the center image
+  "Large businesses",    // Text for the previous image
+  "SMEs/MSMEs",    // Text for the next image
+  "Franchise owner",      // Additional text for other images
+  "Enterpreneurs",        // Additional text for other images
+];
+
+let currentIndex = 0;
+
+function updateCarousel() {
+  const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+  const nextIndex = (currentIndex + 1) % slides.length;
+
+  // Previous Slide
+  const prevSlide = carouselContainer.children[0];
+  prevSlide.querySelector("img").src = slides[prevIndex];
+  prevSlide.querySelector("p").textContent = textContent[prevIndex];
+  prevSlide.classList.remove("scale-100", "opacity-100");
+  prevSlide.classList.add("scale-90", "opacity-75");
+  prevSlide.querySelector("p").classList.remove("opacity-100");
+  prevSlide.querySelector("p").classList.add("opacity-50");
+
+  // Current Slide
+  const currentSlide = carouselContainer.children[1];
+  currentSlide.querySelector("img").src = slides[currentIndex];
+  currentSlide.querySelector("p").textContent = textContent[currentIndex];
+  currentSlide.classList.remove("scale-90", "opacity-75");
+  currentSlide.classList.add("scale-100", "opacity-100");
+  currentSlide.querySelector("p").classList.remove("opacity-50");
+  currentSlide.querySelector("p").classList.add("opacity-100");
+
+  // Next Slide
+  const nextSlide = carouselContainer.children[2];
+  nextSlide.querySelector("img").src = slides[nextIndex];
+  nextSlide.querySelector("p").textContent = textContent[nextIndex];
+  nextSlide.classList.remove("scale-100", "opacity-100");
+  nextSlide.classList.add("scale-90", "opacity-75");
+  nextSlide.querySelector("p").classList.remove("opacity-100");
+  nextSlide.querySelector("p").classList.add("opacity-50");
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateCarousel();
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateCarousel();
+}
+
+// Auto-slide every 3 seconds
+setInterval(nextSlide, 2000);
+
+// Initialize the carousel
+updateCarousel();
+
+      </script>
+      
+
+      
+   
+
+
+
+    
+
+   
+      
+
+
+    
+      
+      
+
    
       
     
 
     <!-- Who Can Use Section -->
-    <section id="who-can-use" class="py-12 sm:py-16 bg-white" data-aos="fade-up">
+    <!-- <section id="who-can-use" class="py-12 sm:py-16 bg-white" data-aos="fade-up">
         <div class="container mx-auto px-4 sm:px-6 text-center">
             <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">Who can use <span class="text-red-500"><a href="start.html">Triggin</a></span> for business</h2>
             <p class="text-base sm:text-lg text-gray-700 mb-6">Manufacturers and supply chain stakeholders ranging from C&F agents, super stockists, distributors, wholesalers, and retailers across any industry.</p>
@@ -139,13 +259,14 @@
 
 
             <section id="carousel2" class="carousel-container relative overflow-hidden">
+
                 <div class="carousel-track flex transition-transform duration-300">
-                    <!-- Image 1 -->
+                   
                     <div class="carousel-card p-4 sm:p-6 bgwhite-100 rounded shadow-md hover:shadow-xl transition-shadow duration-300">
                         <img src="images/1.png" alt="SMBs Icon" class="mx-auto mb-4">
                     </div>
             
-                    <!-- Other Images -->
+                    
                     <div class="carousel-card p-4 sm:p-6 bgwhite-100 rounded shadow-md hover:shadow-xl transition-shadow duration-300">
                         <img src="images/2.png" alt="SMBs Icon" class="mx-auto mb-4">
                     </div>
@@ -156,9 +277,9 @@
                         <img src="images/4.png" alt="SMBs Icon" class="mx-auto mb-4">
                     </div>
             
-                    <!-- Add the rest of the images -->
+                    
                 </div>
-                <!-- Controls -->
+                
                 <button class="carousel-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 shadow-md">
                     &larr;
                 </button>
@@ -168,7 +289,7 @@
             </section>
             
                </div>
-               </section>
+               </section> -->
             
     <!-- Ecosystem Section -->
     <!-- <section id="ecosystem" class="bg-gray-50 py-12 sm:py-16" data-aos="fade-up">
