@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triggin Features</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #343a40;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: white;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    header a {
+      text-decoration: none;
+      margin: 0 15px;
+      color: #343a40;
+      font-size: 16px;
+    }
+    header a:hover {
+      color: #007bff;
+    }
+    header .login-btn {
+      background-color: #ff4d4d;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    header .login-btn:hover {
+      background-color: #e63939;
+    }
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 50px;
+      background: white;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      color: #212529;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #6c757d;
+      margin: 20px 0;
+    }
+    /* Features Section */
+    .features-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 30px 20px;
+    }
+    .features-section::-webkit-scrollbar {
+      height: 8px;
+    }
+    .features-section::-webkit-scrollbar-thumb {
+      background: #cccccc;
+      border-radius: 4px;
+    }
+    .features-section::-webkit-scrollbar-track {
+      background: #f8f9fa;
+    }
+    .feature-card {
+      background: white;
+      border-radius: 50%; /* Makes the card circular */
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 180px; /* Width and height are equal to make a circle */
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s;
+      flex-shrink: 0; /* Prevent shrinking in the flex container */
+    }
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      color: white;
+    }
+    /* .feature-icon.channel {
+      background: rgba(212, 175, 55, 0.7); 
+    }
+    .feature-icon.planning {
+      background: rgba(130, 201, 30, 0.7); 
+    }
+    .feature-icon.global-trade {
+      background: rgba(111, 66, 193, 0.7); 
+    }
+    .feature-icon.logistics {
+      background: rgba(52, 58, 64, 0.7); 
+    }
+    .feature-icon.supply {
+      background: rgba(32, 201, 151, 0.7); 
+    } */
+    .feature-title {
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .feature-description {
+      font-size: 14px;
+      color: #6c757d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div>
+      <h2 style="display: inline; color: #007bff;">Triggin</h2>
+    </div>
+    <nav>
+      <a href="#">How it Works</a>
+      <a href="#">Resources</a>
+      <a href="#">Pricing</a>
+      <a href="#">Contact Us</a>
+      <a href="#" class="login-btn">Login</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Break free from Manual Order Processing</h1>
+    <p>Real-time orders, invoices, and payments at the convenience of your mobile phone.</p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="feature-card">
+      <div class="feature-icon channel">🛒</div>
+      <h3 class="feature-title">Orders</h3>
+      <!-- <p class="feature-description">Visibility, collaboration, and control for optimal channel performance across all tiers.</p> -->
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon planning">📊</div>
+      <h3 class="feature-title">Invoice</h3>
+      <!-- <p class="feature-description">Connected planning across all ecosystem partners with real-time data and AI.</p> -->
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon global-trade">🌍</div>
+      <h3 class="feature-title">Billing</h3>
+      <!-- <p class="feature-description">Cross-border compliance with confident screening and duty filing support.</p> -->
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon logistics">🚛</div>
+      <h3 class="feature-title">Payments</h3>
+      <!-- <p class="feature-description">Planning and execution for efficient movement of goods across modes and regions.</p> -->
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon supply">📦</div>
+      <h3 class="feature-title">Manage</h3>
+      <!-- <p class="feature-description">Optimal supply with complete visibility and collaboration for all suppliers.</p> -->
+    </div>
+  </section>
+</body>
+</html>
