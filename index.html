@@ -10,6 +10,8 @@
     <link rel="Stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
 
 </head>
 <body class=" font-sans leading-normal tracking-normal" style="background-color: #ffffff;">
@@ -127,323 +129,161 @@
     </section>
 
 
-
     <section id="who-can-use" class="py-12 sm:py-16 bg-white" data-aos="fade-up">
-        <div class="container mx-auto px-4 sm:px-6 text-center">
-          <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">
-            Who can use <span class="text-red-500"><a href="start.html">Triggin</a></span> for business
-          </h2>
-          <p class="text-base sm:text-lg text-gray-700 mb-6">
-            Manufacturers and supply chain stakeholders ranging from C&F agents, super stockists, distributors, wholesalers, and retailers across any industry.
-          </p>
+        <div class="container mx-auto px-6 sm:px-12">
+          <div class="grid grid-cols-6 gap-6 items-center">
+            <!-- Left Side: Heading (2 parts) -->
+            <div class="col-span-6 sm:col-span-3 text-center sm:text-left">
+              <h2 class="text-3xl sm:text-5xl font-bold leading-tight">
+                Who can use <br>
+                <span class="text-red-500"><a href="start.html">Triggin</a></span> for business
+              </h2>
+            </div>
+            <!-- Right Side: Text (3 parts) -->
+            <div class="col-span-6 sm:col-span-3 text-center sm:text-left">
+              <p class="text-xs sm:text-sm text-black-700">
+                Manufactures and all supply chain stakeholders ranging from <br>
+                C&F agents, Super Stockists, Dealers, Distributors, Stockists, <br>
+                Wholesalers, Retailers across any industry
+              </p>
+            </div>
+          </div>
+        </div>
+        <br>
       
-          <!-- Carousel Container -->
-          <div id="carousel-container" class="relative flex justify-center items-center space-x-6 overflow-hidden">
-            <!-- Previous Image -->
-            <div class="carousel-item scale-90 opacity-75 transition-all duration-500 ease-in-out">
-              <img src="images/5.png" alt="Prev Slide" class="w-40 h-40 sm:w-48 sm:h-48 rounded-full object-cover">
-              <p class="text-sm sm:text-base mt-2 opacity-50">Prev Image Text</p>
+        <div class="flex justify-center items-center gap-6 p-8 flex-wrap">
+          <!-- Card 1 (with initial color blue) -->
+          <div class="group relative w-64 h-64 bg-blue-100 rounded-lg shadow-lg overflow-hidden hover:bg-white transition-all duration-500 transform group-hover:scale-110">
+            <!-- Circle and Icon -->
+            <div class="absolute top-8 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full flex items-center justify-center shadow-lg transition-transform duration-500 group-hover:scale-110">
+              <img src="images/1.png" alt="Lock Icon" class="w-full h-full object-cover rounded-full">
             </div>
-            <!-- Current Image -->
-            <div class="carousel-item scale-100 transition-all duration-500 ease-in-out">
-              <img src="images/1.png" alt="Active Slide" class="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover border-4 border-light-blue-300">
-              <p class="text-sm sm:text-base mt-2 opacity-100">Current Image Text</p>
+            <!-- Text Content -->
+            <div class="absolute bottom-8 w-full text-center px-6 transition-all duration-500">
+              <h3 class="text-lg font-bold text-gray-800 group-hover:opacity-0 transition-opacity duration-300">Startups</h3>
+              <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Your data is protected with robust security measures.
+              </p>
             </div>
-            <!-- Next Image -->
-            <div class="carousel-item scale-90 opacity-75 transition-all duration-500 ease-in-out">
-              <img src="images/2.png" alt="Next Slide" class="w-40 h-40 sm:w-48 sm:h-48 rounded-full object-cover">
-              <p class="text-sm sm:text-base mt-2 opacity-50">Next Image Text</p>
+          </div>
+      
+          <!-- Card 2 (with initial color green) -->
+          <div class="group relative w-64 h-64 bg-green-100 rounded-lg shadow-lg overflow-hidden hover:bg-white transition-all duration-500 transform group-hover:scale-110">
+            <!-- Circle and Icon -->
+            <div class="absolute top-8 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full flex items-center justify-center shadow-lg transition-transform duration-500 group-hover:scale-110">
+              <img src="images/2.png" alt="API Icon" class="w-full h-full object-cover rounded-full">
+            </div>
+            <!-- Text Content -->
+            <div class="absolute bottom-8 w-full text-center px-6 transition-all duration-500">
+              <h3 class="text-lg font-bold text-gray-800 group-hover:opacity-0 transition-opacity duration-300">Large businesses</h3>
+              <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Simplify API integration with a no-code solution.
+              </p>
+            </div>
+          </div>
+      
+          <!-- Card 3 (with initial color purple) -->
+          <div class="group relative w-64 h-64 bg-purple-100 rounded-lg shadow-lg overflow-hidden hover:bg-white transition-all duration-500 transform group-hover:scale-110">
+            <!-- Circle and Icon -->
+            <div class="absolute top-8 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full flex items-center justify-center shadow-lg transition-transform duration-500 group-hover:scale-110">
+              <img src="images/3.png" alt="Lightning Icon" class="w-full h-full object-cover rounded-full">
+            </div>
+            <!-- Text Content -->
+            <div class="absolute bottom-8 w-full text-center px-6 transition-all duration-500">
+              <h3 class="text-lg font-bold text-gray-800 group-hover:opacity-0 transition-opacity duration-300">Franchise owner</h3>
+              <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Achieve seamless integration with minimal effort.
+              </p>
+            </div>
+          </div>
+      
+          <!-- Card 4 (with initial color red) -->
+          <div class="group relative w-64 h-64 bg-red-100 rounded-lg shadow-lg overflow-hidden hover:bg-white transition-all duration-500 transform group-hover:scale-110">
+            <!-- Circle and Icon -->
+            <div class="absolute top-8 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full flex items-center justify-center shadow-lg transition-transform duration-500 group-hover:scale-110">
+              <img src="images/4.png" alt="Cube Icon" class="w-full h-full object-cover rounded-full">
+            </div>
+            <!-- Text Content -->
+            <div class="absolute bottom-8 w-full text-center px-6 transition-all duration-500">
+              <h3 class="text-lg font-bold text-gray-800 group-hover:opacity-0 transition-opacity duration-300">SMEs/MSMEs</h3>
+              <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Create a checkout experience tailored to your needs.
+              </p>
             </div>
           </div>
         </div>
       </section>
+      
 
 
-      <script>
 
-const carouselContainer = document.querySelector("#carousel-container");
-const slides = [
-  "images/1.png",
-  "images/2.png",
-  "images/3.png",
-  "images/4.png",
-  "images/5.png",
-]; // Array of images
+<!-- services who can use -->
 
-const textContent = [
-  "Startups ", // Text for the center image
-  "Large businesses",    // Text for the previous image
-  "SMEs/MSMEs",    // Text for the next image
-  "Franchise owner",      // Additional text for other images
-  "Enterpreneurs",        // Additional text for other images
-];
-
-let currentIndex = 0;
-
-function updateCarousel() {
-  const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-  const nextIndex = (currentIndex + 1) % slides.length;
-
-  // Previous Slide
-  const prevSlide = carouselContainer.children[0];
-  prevSlide.querySelector("img").src = slides[prevIndex];
-  prevSlide.querySelector("p").textContent = textContent[prevIndex];
-  prevSlide.classList.remove("scale-100", "opacity-100");
-  prevSlide.classList.add("scale-90", "opacity-75");
-  prevSlide.querySelector("p").classList.remove("opacity-100");
-  prevSlide.querySelector("p").classList.add("opacity-50");
-
-  // Current Slide
-  const currentSlide = carouselContainer.children[1];
-  currentSlide.querySelector("img").src = slides[currentIndex];
-  currentSlide.querySelector("p").textContent = textContent[currentIndex];
-  currentSlide.classList.remove("scale-90", "opacity-75");
-  currentSlide.classList.add("scale-100", "opacity-100");
-  currentSlide.querySelector("p").classList.remove("opacity-50");
-  currentSlide.querySelector("p").classList.add("opacity-100");
-
-  // Next Slide
-  const nextSlide = carouselContainer.children[2];
-  nextSlide.querySelector("img").src = slides[nextIndex];
-  nextSlide.querySelector("p").textContent = textContent[nextIndex];
-  nextSlide.classList.remove("scale-100", "opacity-100");
-  nextSlide.classList.add("scale-90", "opacity-75");
-  nextSlide.querySelector("p").classList.remove("opacity-100");
-  nextSlide.querySelector("p").classList.add("opacity-50");
-}
-
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateCarousel();
-}
-
-function prevSlide() {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  updateCarousel();
-}
-
-// Auto-slide every 3 seconds
-setInterval(nextSlide, 2000);
-
-// Initialize the carousel
-updateCarousel();
-
-      </script>
-
-
-    <!-- Who Can Use Section -->
-    <!-- <section id="who-can-use" class="py-12 sm:py-16 bg-white" data-aos="fade-up">
-        <div class="container mx-auto px-4 sm:px-6 text-center">
-            <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">Who can use <span class="text-red-500"><a href="start.html">Triggin</a></span> for business</h2>
-            <p class="text-base sm:text-lg text-gray-700 mb-6">Manufacturers and supply chain stakeholders ranging from C&F agents, super stockists, distributors, wholesalers, and retailers across any industry.</p>
-        
-
-
-            <section id="carousel2" class="carousel-container relative overflow-hidden">
-
-                <div class="carousel-track flex transition-transform duration-300">
-                   
-                    <div class="carousel-card p-4 sm:p-6 bgwhite-100 rounded shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <img src="images/1.png" alt="SMBs Icon" class="mx-auto mb-4">
-                    </div>
-            
-                    
-                    <div class="carousel-card p-4 sm:p-6 bgwhite-100 rounded shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <img src="images/2.png" alt="SMBs Icon" class="mx-auto mb-4">
-                    </div>
-                    <div class="carousel-card p-4 sm:p-6 bg-white-100 rounded shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <img src="images/3.png" alt="SMBs Icon" class="mx-auto mb-4">
-                    </div>
-                    <div class="carousel-card p-4 sm:p-6 bg-white-100 rounded shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <img src="images/4.png" alt="SMBs Icon" class="mx-auto mb-4">
-                    </div>
-            
-                    
-                </div>
-                
-                <button class="carousel-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 shadow-md">
-                    &larr;
-                </button>
-                <button class="carousel-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 shadow-md">
-                    &rarr;
-                </button>
-            </section>
-            
-               </div>
-               </section> -->
-            
-    <!-- Ecosystem Section -->
-    <!-- <section id="ecosystem" class="bg-gray-50 py-12 sm:py-16" data-aos="fade-up">
-        <div class="container mx-auto px-4 sm:px-6 text-center">
-            <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">Our Eco System</h2>
-            <!- Ecosystem Diagram -->
-            <!-- <img src="images/5.png" alt="Ecosystem Diagram" class="mx-auto max-w-full sm:max-w-xl">
+<section class="py-8 sm:py-10">
+    <div class="container mx-auto px-4 sm:px-6">
+      <!-- Section Heading -->
+      <div class="flex flex-col sm:flex-row justify-between items-start mb-8 sm:mb-10">
+        <h2 class="text-4xl sm:text-4xl font-bold leading-tight tracking-tight mb-4 sm:mb-0">
+          Services we can help you with
+        </h2>
+        <p class="text-gray-600 text-sm sm:text-base max-w-md">
+          Manufacturers and all supply chain stakeholders ranging from C&F agents, Super Stockists, Dealers, Distributors, Stockists, Wholesalers, Retailers across any industry.
+        </p>
+      </div>
+  
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 justify-center">
+        <!-- Service Card 1 -->
+        <div class="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 max-w-[250px] mx-auto">
+          <div class="icon-container bg-yellow-100 rounded-full h-14 w-14 flex items-center justify-center overflow-hidden flex-shrink-0">
+            <img src="images/6.png" alt="B2B Networking Icon" class="h-full w-full object-cover">
+          </div>
+          <div class="max-w-[180px]">
+            <h3 class="text-base sm:text-lg font-semibold">B2B Networking</h3>
+            <p class="text-gray-600 text-xs sm:text-sm mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum, dstiae im nsectetur adipisc sapiente laborum verqui eum, es necessita tibuspedit sequi?</p>
+            <a href="#" class="text-indigo-600 font-semibold text-xs sm:text-sm mt-1 inline-block">Learn More &rarr;</a>
+          </div>
         </div>
-    </section>  -->
-
-
-    <section id="services" class="max-w-6xl mx-auto px-4 sm:px-8 py-8 sm:py-16" data-aos="fade-up">
-        <div class="flex flex-col lg:flex-row lg:items-center mb-6 sm:mb-8">
-            <div>
-                <h2 class="text-2xl sm:text-3xl font-bold">Services we can</h2>
-                <h2 class="text-2xl sm:text-3xl font-bold">help you with</h2>
-            </div>
-            <p class="text-gray-700 lg:ml-16 mt-4 lg:mt-0 max-w-lg text-base sm:text-lg">Manufacturers and all supply chain stakeholders ranging from C&F agents, Super Stockists, Dealers, Distributors, Stockists, Wholesalers, Retailers across.</p>
+  
+        <!-- Service Card 2 -->
+        <div class="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 max-w-[250px] mx-auto">
+          <div class="icon-container bg-yellow-100 rounded-full h-14 w-14 flex items-center justify-center overflow-hidden flex-shrink-0">
+            <img src="images/7.png" alt="Retalytics Icon" class="h-full w-full object-cover">
+          </div>
+          <div class="max-w-[180px]">
+            <h3 class="text-base sm:text-lg font-semibold">Retalytics</h3>
+            <p class="text-gray-600 text-xs sm:text-sm mt-1">Lorem ipsum dolor sit amet, consectetur adipisc sapiente laborum verqui nsectetur adipisc sapiente laborum verqui eum, es necessita tibus eum, es necessita tibus.</p>
+            <a href="#" class="text-indigo-600 font-semibold text-xs sm:text-sm mt-1 inline-block">Learn More &rarr;</a>
+          </div>
         </div>
-    
-        <!-- Carousel Section -->
-        <section id="carousel1" class="carousel-container relative overflow-hidden">
-            <div class="carousel-track flex transition-transform duration-300">
-                <!-- Card 1 -->
-                <div class="carousel-card flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <div class="w-30 sm:w-30 h-20 sm:h-18 flex items-center justify-center icon-bg-gray rounded-full">
-                        <img src="images/6.png" alt="B2B Networking Icon" class="w-30 h-26 sm:w-16 sm:h-16 object-cover rounded-full">
-                    </div>
-                    <!-- <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center icon-bg-gray rounded-full">
-                        <img src="images/6.png" alt="B2B Networking Icon">
-                    </div>  -->
-                    <div>
-                        <h3 class="text-lg sm:text-xl font-semibold">B2B Networking</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ex saepe doloremque illo sit ratione aut vel eius earum quos placeat soluta atque,Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eaque facere soluta. Amet deleniti, consequuntur possimus nam non maiores vitae nisi laborum tenetur perferendis alias reiciendis quas, velit, iusto veritatis. repellat distinctio officiis? Numquam voluptate consequuntur autem?</p>
-                        <a href="#" class="text-blue-500 font-semibold mt-2 inline-block">Learn More &rarr;</a>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="carousel-card flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center icon-bg-yellow rounded-full">
-                        <img src="images/7.png" alt="Retailytics Icon">
-                    </div>
-                    <div>
-                        <h3 class="text-lg sm:text-xl font-semibold">Retailytics</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio quae dolore odit nostrum quidem dolorem explicabo laudantium pariatur excepturi eveniet molestias rem quas ullam officia, fuga ab aperiam nisi corporis! amet consectetur adipisicing elit. Labore vero mollitia error possimus doloribus quos, ad beatae soluta perspiciatis, perferendis facilis accusantium in! Nesciunt iste itaque neque totam eaque corrupti?</p>
-                        <a href="#" class="text-blue-500 font-semibold mt-2 inline-block">Learn More &rarr;</a>
-                    </div>
-                </div>
-    
-                <div class="carousel-card flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center icon-bg-yellow rounded-full">
-                        <img src="images/8.png" alt="Inventory Optimization Icon">
-                    </div>
-                    <div>
-                        <h3 class="text-lg sm:text-xl font-semibold">Inventory Optimization Icon</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, consectetur sunt! Reprehenderit doloremque, cum atque sunt quidem placeat repudiandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis eveniet odit eaque laudantium incidunt doloremque corrupti, alias, corporis maiores consequuntur quibusdam! Eaque quam in exercitationem obcaecati ullam natus. Corrupti, culpa. laborum veritatis corrupti, aperiam iste quia asperiores delectus, libero debitis iusto?</p>
-                        <a href="#" class="text-blue-500 font-semibold mt-2 inline-block">Learn More &rarr;</a>
-                    </div>
-                </div>
-    
-                <div class="carousel-card flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center icon-bg-yellow rounded-full">
-                        <img src="images/8.png" alt="Sales Channel Development Icon">
-                    </div>
-                    <div>
-                        <h3 class="text-lg sm:text-xl font-semibold">Sales Channel Development Icon</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusamus recusandae corporis accusantium? Fugit quo rem nobis voluptate error enim commodi deserunt id ut neque incidunt ipsam, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, non? Illo molestiae, voluptatibus fuga adipisci perferendis facilis odio vero ad quibusdam a earum quasi nulla aspernatur veniam maxime similique eligendi.odit numquam! Voluptas.</p>
-                        <a href="#" class="text-blue-500 font-semibold mt-2 inline-block">Learn More &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-    
-<script>
-
-    // Select the carousel track
-const carouselTrack = document.querySelector('.carousel-track');
-
-// Get the total number of cards
-const totalCards = document.querySelectorAll('.carousel-card').length;
-
-// Initial slide index
-let currentSlide = 0;
-
-// Function to move the carousel to the next slide
-function moveToNextSlide() {
-    currentSlide = (currentSlide + 1) % totalCards; // Loop to the first slide when it reaches the end
-    carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`; // Move the track
-}
-
-// Set the interval to move to the next slide every 3 seconds
-setInterval(moveToNextSlide, 3000); // Change the interval time (3000ms = 3 seconds)
-
-// Optionally, you can add smooth transition effect in the CSS (already handled by Tailwind classes).
-
-</script>
-
-
-
-
-    <!-- Services Section -->
-    <!-- <section id="services" class="max-w-6xl mx-auto px-4 sm:px-8 py-8 sm:py-16" data-aos="fade-up">
-        <div class="flex flex-col lg:flex-row lg:items-center mb-6 sm:mb-8">
-            <div>
-                <h2 class="text-2xl sm:text-3xl font-bold">Services we can</h2>
-                <h2 class="text-2xl sm:text-3xl font-bold">help you with</h2>
-            </div>
-            <p class="text-gray-700 lg:ml-16 mt-4 lg:mt-0 max-w-lg text-base sm:text-lg">Manufacturers and all supply chain stakeholders ranging from C&F agents, Super Stockists, Dealers, Distributors, Stockists, Wholesalers, Retailers across.</p>
+  
+        <!-- Service Card 3 -->
+        <div class="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 max-w-[250px] mx-auto">
+          <div class="icon-container bg-gray-100 rounded-full h-14 w-14 flex items-center justify-center overflow-hidden flex-shrink-0">
+            <img src="images/8.png" alt="Supply Chain Solutions Icon" class="h-full w-full object-cover">
+          </div>
+          <div class="max-w-[180px]">
+            <h3 class="text-base sm:text-lg font-semibold">Supply chain solutions</h3>
+            <p class="text-gray-600 text-xs sm:text-sm mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsit? Animi est  nsectetur adipisc sapiente laborum verqui eum, es necessita tibussumenda eaque.</p>
+            <a href="#" class="text-indigo-600 font-semibold text-xs sm:text-sm mt-1 inline-block">Learn More &rarr;</a>
+          </div>
         </div>
-
-
-        <section id="carousel1" class="carousel-container relative overflow-hidden">
-            <div class="carousel-track flex transition-transform duration-300">
-               
-                <div class="carousel-card flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center icon-bg-gray rounded-full">
-                        <img src="images/6.png" alt="B2B Networking Icon">
-                    </div>
-                    <div>
-                        <h3 class="text-lg sm:text-xl font-semibold">B2B Networking</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="text-blue-500 font-semibold mt-2 inline-block">Learn More &rarr;</a>
-                    </div>
-                </div>
-               
-                <div class="carousel-card flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center icon-bg-yellow rounded-full">
-                        <img src="images/7.png" alt="Retailytics Icon">
-                    </div>
-                    <div>
-                        <h3 class="text-lg sm:text-xl font-semibold">Retailytics</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="text-blue-500 font-semibold mt-2 inline-block">Learn More &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="carousel-card flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center icon-bg-yellow rounded-full">
-                        <img src="images/8.png" alt="Retailytics Icon">
-                    </div>
-                    <div>
-                        <h3 class="text-lg sm:text-xl font-semibold">Inventory Optimization Icon</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="text-blue-500 font-semibold mt-2 inline-block">Learn More &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="carousel-card flex items-start space-x-4 p-4 sm:p-6 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center icon-bg-yellow rounded-full">
-                        <img src="images/8.png" alt="Retailytics Icon">
-                    </div>
-                    <div>
-                        <h3 class="text-lg sm:text-xl font-semibold">Sales Channel Development Icon</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="#" class="text-blue-500 font-semibold mt-2 inline-block">Learn More &rarr;</a>
-                    </div>
-                </div>
-            </div>
-            
-            <button class="carousel-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 shadow-md">
-                &larr;
-            </button>
-            <button class="carousel-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 shadow-md">
-                &rarr;
-            </button>
-        </section> -->
-
-
-       
-
-
-    </section>
+  
+        <!-- Service Card 4 -->
+        <div class="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 max-w-[250px] mx-auto">
+          <div class="icon-container bg-gray-100 rounded-full h-14 w-14 flex items-center justify-center overflow-hidden flex-shrink-0">
+            <img src="images/9.png" alt="Analytics Icon" class="h-full w-full object-cover">
+          </div>
+          <div class="max-w-[180px]">
+            <h3 class="text-base sm:text-lg font-semibold">Analytics</h3>
+            <p class="text-gray-600 text-xs sm:text-sm mt-1">Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sitati libero natus fuga debitis ex nisi! Officiis, esse. adipiscing elit. Lorem ipsum ores. Excores maxime?</p>
+            <a href="#" class="text-indigo-600 font-semibold text-xs sm:text-sm mt-1 inline-block">Learn More &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
@@ -505,52 +345,57 @@ setInterval(moveToNextSlide, 3000); // Change the interval time (3000ms = 3 seco
     </section>
  
     <!-- Section 2 -->
-    <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-center" style="animation: fadeIn 1s ease-in-out;">
-        <!-- Text Content on Left -->
-        <div class="lg:w-1/2" style="animation: slideIn 1s ease-in-out;">
-            <p class="text-gray-500 font-semibold mb-2">Collaborate</p>
-            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Break free from<br>Manual order processing</h2>
-            <p class="text-gray-700 mb-6">Real-time orders, invoices, payments at the convenience of your mobile phone.</p>
-            
-            <!-- Features List -->
-            <div class="grid grid-cols-2 gap-y-4 text-sm sm:text-base">
-                <div class="flex items-center">
-                    <!-- <span class="icon-check text-lg">✔️</span> -->
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <p class="font-semibold ml-4 text-lg">Orders</p>
-                </div>
-                <div class="flex items-center">
-                    <!-- <span class="icon-check text-lg">✔️</span> -->
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <p class="font-semibold ml-2 text-lg">Billing</p>
-                </div>
-                <div class="flex items-center">
-                    <!-- <span class="icon-check text-lg">✔️</span> -->
-                    <i class="fa-solid fa-file-invoice"></i>
-                    <p class="font-semibold ml-2 text-lg">Invoices</p>
-                </div>
-                <div class="flex items-center">
-                    <i class="fa-solid fa-list-check"></i>
-                    <!-- <span class="icon-check text-lg">✔️</span> -->
-                    <p class="font-semibold ml-2 text-lg">Manage</p>
-                </div>
-                <div class="flex items-center">
-                    <i class="fa-regular fa-credit-card"></i>
-                    <!-- <span class="icon-check text-lg">✔️</span> -->
-                    <p class="font-semibold ml-2 text-lg">Payments</p>
-                </div>
+    <section class="bg-white-100 font-sans">
+        <div class="container mx-auto p-6 text-center">
+          <!-- Header Section -->
+          <div class="mb-10">
+            <h1 class="text-4xl font-bold text-gray-800">Break free from Manual Order Processing</h1>
+            <p class="text-black-600 mt-2">Real-time orders, invoices, and payments at the convenience of your mobile phone.</p>
+          </div>
+      
+          <!-- Cards Section -->
+          <div class="flex flex-wrap justify-center gap-6">
+            <!-- Card 1 -->
+            <div class="bg-blue-100 rounded-lg shadow-lg p-6 text-center w-64 transform transition-transform hover:-translate-y-2">
+              <div class="icon bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-2xl">🛒</div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">Orders</h3>
+              <p class="text-sm text-gray-600">Visibility, collaboration, and control for optimal channel performance across all tiers.</p>
             </div>
-        </div>
-
-        <!-- Image on Right -->
-        <!-- <div class="lg:w-1/2 flex justify-center lg:justify-end mt-6 lg:mt-0" style="animation: slideIn 1s ease-in-out;">
-            <img src="images/13.png" alt="Device Screens" class="w-full lg:w-3/4">
-        </div> -->
-        <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0 hover:animate-spin" style="animation: slideIn 1s ease-in-out;">
-            <img src="images/13.png" alt="App Screenshot" class="w-full lg:w-3/4 hover-zoom">
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64 transform transition-transform hover:-translate-y-2">
+              <div class="icon bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-2xl">📄</div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">Invoices</h3>
+              <p class="text-sm text-gray-600">Connected planning across all ecosystem partners with real-time data and AI.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-blue-100 rounded-lg shadow-lg p-6 text-center w-64 transform transition-transform hover:-translate-y-2">
+              <div class="icon bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-2xl">💰</div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">Billing</h3>
+              <p class="text-sm text-gray-600">Cross-border compliance with confident screening and duty filing support.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64 transform transition-transform hover:-translate-y-2">
+              <div class="icon bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-2xl">💳</div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">Payments</h3>
+              <p class="text-sm text-gray-600">Planning and execution for efficient movement of goods across modes and regions.</p>
+            </div>
+            <!-- Card 5 -->
+            <div class="bg-blue-100 rounded-lg shadow-lg p-6 text-center w-64 transform transition-transform hover:-translate-y-2">
+              <div class="icon bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-2xl">🗂</div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">Manage</h3>
+              <p class="text-sm text-gray-600">Optimal supply with complete visibility and collaboration for all suppliers.</p>
+            </div>
+            <!-- Card 6 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64 transform transition-transform hover:-translate-y-2">
+              <div class="icon bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-2xl">💬</div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">Feedback</h3>
+              <p class="text-sm text-gray-600">Collecting and analyzing customer feedback to improve your services.</p>
+            </div>
+          </div>
         </div>
     </section>
-
+<!-- dupe section -->
+   
     <!-- Section 3 -->
     <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-center" style="animation: fadeIn 1s ease-in-out;">
         <!-- Image on Left -->
@@ -590,65 +435,11 @@ setInterval(moveToNextSlide, 3000); // Change the interval time (3000ms = 3 seco
 
     <!-- Animation Script and Styles -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <!-- <style>
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        @keyframes slideIn {
-            0% { transform: translateX(-100%); opacity: 0; }
-            100% { transform: translateX(0); opacity: 1; }
-        }
-    </style> -->
+    
 </body>
 <html>
 
 <body class="bg-white-100">
-   
-
-        <!-- Unique Features Section -->
-        <!-- <section style="padding: 40px; background-color: #ffffff; text-align: center;">
-            <h2 style="font-size: 2em; font-weight: 600; margin-bottom: 20px;">What are we Offering <br> Explore our features</h2>
-    
-            <div class="features-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-                <div style="text-align: center; padding: 10px;">
-                    <img src="images/16.png" alt="Icon 1" style="width: 50px; height: 50px; margin-bottom: 15px;">
-                    <h3 style="font-size: 1.2em; font-weight: bold; color: #333; margin-bottom: 10px;">Add your products</h3>
-                    <p style="font-size: 1em; color: #666;">Add all the products you manufacture to the platform. These products added will be displayed to all the buyers on the platform.</p>
-                </div>
-    
-                <div style="text-align: center; padding: 10px;">
-                    <img src="images/17.png" alt="Icon 2" style="width: 50px; height: 50px; margin-bottom: 15px;">
-                    <h3 style="font-size: 1.2em; font-weight: bold; color: #333; margin-bottom: 10px;">Add your products</h3>
-                    <p style="font-size: 1em; color: #666;">Add all the products you manufacture to the platform. These products added will be displayed to all the buyers on the platform.</p>
-                </div>
-    
-                <div style="text-align: center; padding: 10px;">
-                    <img src="images/18.png" alt="Icon 3" style="width: 50px; height: 50px; margin-bottom: 15px;">
-                    <h3 style="font-size: 1.2em; font-weight: bold; color: #333; margin-bottom: 10px;">Add your products</h3>
-                    <p style="font-size: 1em; color: #666;">Add all the products you manufacture to the platform. These products added will be displayed to all the buyers on the platform.</p>
-                </div>
-    
-                <div style="text-align: center; padding: 10px;">
-                    <img src="images/19.png" alt="Icon 4" style="width: 50px; height: 50px; margin-bottom: 15px;">
-                    <h3 style="font-size: 1.2em; font-weight: bold; color: #333; margin-bottom: 10px;">Add your products</h3>
-                    <p style="font-size: 1em; color: #666;">Add all the products you manufacture to the platform. These products added will be displayed to all the buyers on the platform.</p>
-                </div>
-    
-                <div style="text-align: center; padding: 10px;">
-                    <img src="images/20.png" alt="Icon 5" style="width: 50px; height: 50px; margin-bottom: 15px;">
-                    <h3 style="font-size: 1.2em; font-weight: bold; color: #333; margin-bottom: 10px;">Add your products</h3>
-                    <p style="font-size: 1em; color: #666;">Add all the products you manufacture to the platform. These products added will be displayed to all the buyers on the platform.</p>
-                </div>
-    
-                <div style="text-align: center; padding: 10px;">
-                    <img src="images/21.png" alt="Icon 6" style="width: 50px; height: 50px; margin-bottom: 15px;">
-                    <h3 style="font-size: 1.2em; font-weight: bold; color: #333; margin-bottom: 10px;">Add your products</h3>
-                    <p style="font-size: 1em; color: #666;">Add all the products you manufacture to the platform. These products added will be displayed to all the buyers on the platform.</p>
-                </div>
-            </div>
-        </section> -->
-
 
         <section style="padding: 40px; background-color: #ffffff; text-align: center;">
             <h2 style="font-size: 2em; font-weight: 600; margin-bottom: 20px;">
@@ -716,53 +507,6 @@ setInterval(moveToNextSlide, 3000); // Change the interval time (3000ms = 3 seco
                 transform: scale(1.1); /* Slight zoom on image hover */
             }
         </style>
-        
-   
-        
-        
-        
-          
-        
-    
-        <!-- <style>
-            /* Responsive styling */
-            .features-grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 20px;
-            }
-    
-            /* Adjust grid layout for tablets and small laptops */
-            @media (max-width: 1024px) {
-                .features-grid {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
-    
-            /* Stack items vertically on small screens */
-            @media (max-width: 768px) {
-                .features-grid {
-                    grid-template-columns: 1fr;
-                }
-    
-                h2 {
-                    font-size: 1.8em;
-                }
-            }
-    
-            /* Text adjustments for extra small screens */
-            @media (max-width: 480px) {
-                h3 {
-                    font-size: 1em;
-                }
-    
-                p {
-                    font-size: 0.9em;
-                }
-            }
-        </style> -->
-  
-    
     </section>
 
 </body>
