@@ -334,6 +334,359 @@
   </div>
 </section>
 
+<section id="who-can-use" class="py-12 sm:py-16 bg-white" data-aos="fade-up">
+  <div class="container mx-auto px-4 sm:px-6 text-center">
+    <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8">
+      Who can use <span class="text-red-500"><a href="start.html">Triggin</a></span> for business
+    </h2>
+    <p class="text-base sm:text-lg text-gray-700 mb-6">
+      Manufacturers and supply chain stakeholders ranging from C&F agents, super stockists, distributors, wholesalers, and retailers across any industry.
+    </p>
+
+    <!-- Carousel Container -->
+    <div id="carousel-container" class="relative flex justify-center items-center space-x-6 overflow-hidden">
+      <!-- Previous Image -->
+      <div class="carousel-item scale-90 opacity-75 transition-all duration-500 ease-in-out">
+        <img src="images/5.png" alt="Prev Slide" class="w-40 h-40 sm:w-48 sm:h-48 rounded-full object-cover">
+        <p class="text-sm sm:text-base mt-2 opacity-50">Prev Image Text</p>
+      </div>
+      <!-- Current Image -->
+      <div class="carousel-item scale-100 transition-all duration-500 ease-in-out">
+        <img src="images/1.png" alt="Active Slide" class="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover border-4 border-light-blue-300">
+        <p class="text-sm sm:text-base mt-2 opacity-100">Current Image Text</p>
+      </div>
+      <!-- Next Image -->
+      <div class="carousel-item scale-90 opacity-75 transition-all duration-500 ease-in-out">
+        <img src="images/2.png" alt="Next Slide" class="w-40 h-40 sm:w-48 sm:h-48 rounded-full object-cover">
+        <p class="text-sm sm:text-base mt-2 opacity-50">Next Image Text</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+
+const carouselContainer = document.querySelector("#carousel-container");
+const slides = [
+"images/1.png",
+"images/2.png",
+"images/3.png",
+"images/4.png",
+"images/5.png",
+"images/6.png",
+"images/7.png",
+
+]; // Array of images
+
+const textContent = [
+  
+"SMEs/MSMEs",
+ "Manufacturers",
+ "Dealers & Distributors",
+  "C&F Agents",
+ "Retailers",
+"SMBs",
+"Superstockist"
+
+];
+
+let currentIndex = 0;
+
+function updateCarousel() {
+const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+const nextIndex = (currentIndex + 1) % slides.length;
+
+// Previous Slide
+const prevSlide = carouselContainer.children[0];
+prevSlide.querySelector("img").src = slides[prevIndex];
+prevSlide.querySelector("p").textContent = textContent[prevIndex];
+prevSlide.classList.remove("scale-100", "opacity-100");
+prevSlide.classList.add("scale-90", "opacity-75");
+prevSlide.querySelector("p").classList.remove("opacity-100");
+prevSlide.querySelector("p").classList.add("opacity-50");
+
+// Current Slide
+const currentSlide = carouselContainer.children[1];
+currentSlide.querySelector("img").src = slides[currentIndex];
+currentSlide.querySelector("p").textContent = textContent[currentIndex];
+currentSlide.classList.remove("scale-90", "opacity-75");
+currentSlide.classList.add("scale-100", "opacity-100");
+currentSlide.querySelector("p").classList.remove("opacity-50");
+currentSlide.querySelector("p").classList.add("opacity-100");
+
+// Next Slide
+const nextSlide = carouselContainer.children[2];
+nextSlide.querySelector("img").src = slides[nextIndex];
+nextSlide.querySelector("p").textContent = textContent[nextIndex];
+nextSlide.classList.remove("scale-100", "opacity-100");
+nextSlide.classList.add("scale-90", "opacity-75");
+nextSlide.querySelector("p").classList.remove("opacity-100");
+nextSlide.querySelector("p").classList.add("opacity-50");
+}
+
+function nextSlide() {
+currentIndex = (currentIndex + 1) % slides.length;
+updateCarousel();
+}
+
+function prevSlide() {
+currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+updateCarousel();
+}
+
+// Auto-slide every 3 seconds
+setInterval(nextSlide, 2000);
+
+// Initialize the carousel
+updateCarousel();
+
+</script>
+
+
+
+<section id="carousel-section" class="py-12 bg-white-100" data-aos="fade-up">
+  <div class="relative mx-auto max-w-7xl overflow-hidden">
+    <div class="flex gap-6 transition-transform duration-700 ease-in-out" id="carousel-grids">
+      <!-- 7 Grid Items -->
+      <div class="grid-item p-6 bg-purple-100 rounded-lg shadow-lg text-center">
+        <div class="circle-image bg-white w-20 h-20 mx-auto flex items-center justify-center rounded-full shadow-md">
+          <img src="images/1.png" alt="Image 1" class="w-14 h-14 object-cover">
+        </div>
+        <p class="mt-3 text-gray-800 font-medium">SMEs/MSMEs</p>
+      </div>
+      <div class="grid-item p-6 bg-blue-100 rounded-lg shadow-lg text-center">
+        <div class="circle-image bg-white w-20 h-20 mx-auto flex items-center justify-center rounded-full shadow-md">
+          <img src="images/2.png" alt="Image 2" class="w-14 h-14 object-cover">
+        </div>
+        <p class="mt-3 text-gray-800 font-medium">Manufacturers</p>
+      </div>
+      <div class="grid-item p-6 bg-yellow-100 rounded-lg shadow-lg text-center">
+        <div class="circle-image bg-white w-20 h-20 mx-auto flex items-center justify-center rounded-full shadow-md">
+          <img src="images/3.png" alt="Image 3" class="w-14 h-14 object-cover">
+        </div>
+        <p class="mt-3 text-gray-800 font-medium">Dealers & Distributors</p>
+      </div>
+      <div class="grid-item p-6 bg-green-100 rounded-lg shadow-lg text-center">
+        <div class="circle-image bg-white w-20 h-20 mx-auto flex items-center justify-center rounded-full shadow-md">
+          <img src="images/4.png" alt="Image 4" class="w-14 h-14 object-cover">
+        </div>
+        <p class="mt-3 text-gray-800 font-medium"> C&F Agents
+        </p>
+      </div>
+      <div class="grid-item p-6 bg-pink-100 rounded-lg shadow-lg text-center">
+        <div class="circle-image bg-white w-20 h-20 mx-auto flex items-center justify-center rounded-full shadow-md">
+          <img src="images/5.png" alt="Image 5" class="w-14 h-14 object-cover">
+        </div>
+        <p class="mt-3 text-gray-800 font-medium">Retailers</p>
+      </div>
+      <div class="grid-item p-6 bg-indigo-100 rounded-lg shadow-lg text-center">
+        <div class="circle-image bg-white w-20 h-20 mx-auto flex items-center justify-center rounded-full shadow-md">
+          <img src="images/6.png" alt="Image 6" class="w-14 h-14 object-cover">
+        </div>
+        <p class="mt-3 text-gray-800 font-medium">SMBs</p>
+      </div>
+      <div class="grid-item p-6 bg-red-100 rounded-lg shadow-lg text-center">
+        <div class="circle-image bg-white w-20 h-20 mx-auto flex items-center justify-center rounded-full shadow-md">
+          <img src="images/7.png" alt="Image 7" class="w-14 h-14 object-cover">
+        </div>
+        <p class="mt-3 text-gray-800 font-medium">Superstockist</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #carousel-grids {
+    display: flex;
+    transition: transform 0.7s ease-in-out;
+    will-change: transform;
+  }
+
+  .grid-item {
+    flex: 0 0 calc(100% / 5); /* Display 5 grids at a time */
+    height: 260px; /* Reduced height for a cleaner design */
+    width: 180px; /* Adjusted for proper aspect ratio */
+    transition: background-color 0.7s ease, transform 0.7s ease;
+    text-align: center;
+  }
+
+  .grid-item .circle-image {
+    margin-bottom: 10px; /* Spacing between the image and text */
+  }
+
+  .grid-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  .grid-item.highlight {
+    background-color: white !important;
+    transform: scale(1.05);
+    z-index: 10;
+  }
+
+  .circle-image img {
+    transition: transform 0.7s ease;
+  }
+
+  .circle-image img.highlight {
+    transform: scale(1.2);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.getElementById("carousel-grids");
+  const items = Array.from(carousel.querySelectorAll(".grid-item"));
+  const totalItems = items.length;
+  let currentIndex = 0;
+
+  // Clone items for seamless looping
+  items.forEach((item) => {
+    const clone = item.cloneNode(true);
+    carousel.appendChild(clone);
+  });
+
+  function updateCarousel() {
+    const translateValue = `calc(-100% / ${totalItems} * ${currentIndex})`;
+    carousel.style.transform = `translateX(${translateValue})`;
+
+    // Highlight the active grid
+    items.forEach((item, index) => {
+      if (index === currentIndex % totalItems) {
+        item.classList.add("highlight");
+      } else {
+        item.classList.remove("highlight");
+      }
+    });
+  }
+
+  function nextItem() {
+    currentIndex++;
+    updateCarousel();
+
+    // Handle seamless looping
+    if (currentIndex >= totalItems) {
+      setTimeout(() => {
+        carousel.style.transition = "none";
+        currentIndex = 0;
+        updateCarousel();
+        requestAnimationFrame(() => {
+          carousel.style.transition = "transform 0.7s ease-in-out";
+        });
+      }, 700);
+    }
+  }
+
+  setInterval(nextItem, 3000); // Rotate every 3 seconds
+  updateCarousel();
+});
+
+</script>
+
+
+
+
+
+
+<section id="carousel-section" class="py-12 bg-white" data-aos="fade-up">
+  <div class="relative mx-auto max-w-5xl overflow-hidden">
+    <div class="flex gap-6 transition-transform duration-700 ease-in-out" id="carousel-images">
+      <img src="images/1.png" alt="Image 1" class="w-48 h-72 object-cover rounded-lg shadow-lg">
+      <img src="images/2.png" alt="Image 2" class="w-48 h-72 object-cover rounded-lg shadow-lg">
+      <img src="images/3.png" alt="Image 3" class="w-48 h-72 object-cover rounded-lg shadow-lg">
+      <img src="images/4.png" alt="Image 4" class="w-48 h-72 object-cover rounded-lg shadow-lg">
+      <img src="images/3.png" alt="Image 5" class="w-48 h-72 object-cover rounded-lg shadow-lg">
+      <img src="images/1.png" alt="Image 6" class="w-48 h-72 object-cover rounded-lg shadow-lg">
+      <img src="images/2.png" alt="Image 7" class="w-48 h-72 object-cover rounded-lg shadow-lg">
+    </div>
+  </div>
+  <!-- <h3 class="mt-8 text-center text-xl font-semibold text-gray-800">Who Can Use This?</h3>
+  <p class="text-center text-gray-600">This carousel highlights features with a seamless and engaging animation.</p> -->
+</section>
+
+<style>
+  #carousel-images {
+    display: flex;
+    transition: transform 0.7s ease-in-out;
+    will-change: transform;
+  }
+
+  #carousel-images img {
+    flex-shrink: 0;
+    width: calc(100% / 5); /* Adjust based on visible items */
+    transition: transform 0.7s ease, opacity 0.7s ease;
+  }
+
+  #carousel-images img.highlight {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  #carousel-images img:not(.highlight) {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+
+  .carousel-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.getElementById("carousel-images");
+    const images = Array.from(carousel.querySelectorAll("img"));
+    const totalImages = images.length;
+    const visibleCount = 5; // Number of visible images
+    let currentIndex = Math.floor(visibleCount / 2); // Start with the middle image highlighted
+
+    // Clone images for seamless looping
+    images.forEach((img) => {
+      const clone = img.cloneNode(true);
+      carousel.appendChild(clone);
+    });
+
+    function updateCarousel() {
+      // Calculate transform value for smooth sliding
+      const translateValue = `calc(-100% / ${totalImages} * ${currentIndex})`;
+      carousel.style.transform = `translateX(${translateValue})`;
+
+      // Highlight the middle image
+      Array.from(carousel.children).forEach((img, index) => {
+        if (index === currentIndex % totalImages) {
+          img.classList.add("highlight");
+        } else {
+          img.classList.remove("highlight");
+        }
+      });
+    }
+
+    function nextImage() {
+      currentIndex++;
+      updateCarousel();
+
+      // Handle seamless looping
+      if (currentIndex >= totalImages) {
+        setTimeout(() => {
+          carousel.style.transition = "none"; // Temporarily disable transition
+          currentIndex = 0;
+          updateCarousel();
+          requestAnimationFrame(() => {
+            carousel.style.transition = "transform 0.7s ease-in-out"; // Re-enable transition
+          });
+        }, 700); // Match the transition duration
+      }
+    }
+
+    setInterval(nextImage, 3000); // Change image every 3 seconds
+    updateCarousel();
+  });
+</script>
 
 
 <section id="who-can-use" class="py-12 sm:py-16 bg-white" data-aos="fade-up">
@@ -482,52 +835,55 @@
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-center lg:items-start" style="animation: fadeIn 1s ease-in-out;">
-      <!-- Text Content on Left -->
-      <div class="lg:w-1/2 lg:pr-8">
-          <p class="text-gray-500 uppercase text-xs sm:text-sm font-semibold mb-2">Collaborate</p>
-          <h2 class="text-2xl sm:text-3xl font-bold mb-4">Break free from Manual order processing</h2>
-          <p class="text-gray-700 mb-6">
-            Say goodbye to manual processes with automation that streamlines order management, reduces errors, and saves time
-          </p>
+    <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-center" style="animation: fadeIn 1s ease-in-out;">
+      <!-- Image on Left -->
+      <!-- <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0" style="animation: slideIn 1s ease-in-out;">
+          <img src="images/14.png" alt="Analytics Image" class="w-full lg:w-3/4">
+      </div> -->
+      <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0 hover:animate-spin" style="animation: slideIn 1s ease-in-out;">
+          <img src="images/13.png" alt="App Screenshot" class="w-full lg:w-3/4 hover-zoom">
+      </div>
   
-          <!-- Features List -->
-          <div class="grid grid-cols-2 gap-4">
-            <!-- Column 1 -->
-            <div>
-              <div class="flex items-center">
-                <div class="text-green-500 text-xl font-bold mr-4">✔</div>
-                <h3 class="text-sm font-medium">Automated order processing and fulfillment </h3>
-              </div>
-              <div class="flex items-center mt-4">
-                <div class="text-green-500 text-xl font-bold mr-4">✔</div>
-                <h3 class="text-sm font-medium">Reduced paperwork and manual entry</h3>
-              </div>
-              <!-- <div class="flex items-center mt-4">
-                <div class="text-green-500 text-xl font-bold mr-4">✔</div>
-                <h3 class="text-lg font-medium"></h3>
-              </div> -->
+      <!-- Text Content on Right -->
+      <div class="lg:w-1/2">
+          <p class="text-gray-500 font-semibold mb-2">Collaborate</p>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">Break free from Manual order processing</h2>
+          <p class="text-gray-700 mb-6">Say goodbye to manual processes with automation that streamlines order management, reduces errors, and saves time</p>
+          
+          
+         <!-- Features List -->
+         <div class="grid grid-cols-2 gap-4">
+          <!-- Column 1 -->
+          <div>
+            <div class="flex items-center">
+              <div class="text-green-500 text-xl font-bold mr-4">✔</div>
+              <h3 class="text-sm font-medium">Automated order processing and fulfillment </h3>
             </div>
-            <!-- Column 2 -->
-            <div>
-              <div class="flex items-center">
-                <div class="text-green-500 text-xl font-bold mr-4">✔</div>
-                <h3 class="text-sm font-medium">Intelligent delivery routing options</h3>
-              </div>
-              <div class="flex items-center mt-4">
-                <div class="text-green-500 text-xl font-bold mr-4">✔</div>
-                <h3 class="text-sm font-medium">Streamline returns & replacements</h3>
-              </div>
+            <div class="flex items-center mt-4">
+              <div class="text-green-500 text-xl font-bold mr-4">✔</div>
+              <h3 class="text-sm font-medium">Reduced paperwork and manual entry</h3>
+            </div>
+            <!-- <div class="flex items-center mt-4">
+              <div class="text-green-500 text-xl font-bold mr-4">✔</div>
+              <h3 class="text-lg font-medium"></h3>
+            </div> -->
+          </div>
+          <!-- Column 2 -->
+          <div>
+            <div class="flex items-center">
+              <div class="text-green-500 text-xl font-bold mr-4">✔</div>
+              <h3 class="text-sm font-medium">Intelligent delivery routing options</h3>
+            </div>
+            <div class="flex items-center mt-4">
+              <div class="text-green-500 text-xl font-bold mr-4">✔</div>
+              <h3 class="text-sm font-medium">Streamline returns & replacements</h3>
             </div>
           </div>
-          
-      </div>
-  
-      <!-- Image on Right -->
-      <div class="lg:w-1/2 flex justify-center lg:justify-end mt-6 lg:mt-0" style="animation: slideIn 1s ease-in-out;">
-          <img src="images/13.png" alt="Order Processing" class="w-full lg:w-3/4">
+        </div>
       </div>
   </section>
+
+   
 
 
   <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-center" style="animation: fadeIn 1s ease-in-out;">
@@ -572,46 +928,6 @@
     </div>
 </section>
   
-   
-    <!-- Section 3 -->
-    <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-center" style="animation: fadeIn 1s ease-in-out;">
-        <!-- Image on Left -->
-        <!-- <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0" style="animation: slideIn 1s ease-in-out;">
-            <img src="images/14.png" alt="Analytics Image" class="w-full lg:w-3/4">
-        </div> -->
-        <!-- <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0 hover:animate-spin" style="animation: slideIn 1s ease-in-out;">
-            <img src="images/14.png" alt="App Screenshot" class="w-full lg:w-3/4 hover-zoom">
-        </div> -->
-
-        <!-- Text Content on Right -->
-        <div class="lg:w-1/2">
-            <p class="text-gray-500 font-semibold mb-2">Analytics</p>
-            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Organisation Friendly</h2>
-            <p class="text-gray-700 mb-6">Customisable Hierarchical Systems will help the teams involved in making informed decisions.</p>
-            
-            <!-- Features List -->
-            <div class="space-y-4">
-                <div class="flex items-start">
-                    <span class="text-yellow-500 text-2xl mr-2">📊</span>
-                    <div>
-                        <p class="font-semibold">Powerful dashboard</p>
-                        <p class="text-gray-600">Combine multiple reports into a single beautiful dashboard.</p>
-                    </div>
-                </div>
-
-                <div class="flex items-start">
-                    <span class="text-blue-500 text-2xl mr-2">🔄</span>
-                    <div>
-                        <p class="font-semibold">Always in Sync</p>
-                        <p class="text-gray-600">Don’t worry about the data, always be synchronized.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0 hover:animate-spin" style="animation: slideIn 1s ease-in-out;">
-          <img src="images/14.png" alt="App Screenshot" class="w-full lg:w-3/4 hover-zoom">
-      </div>
-    </section>
 
     <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-center" style="animation: fadeIn 1s ease-in-out;">
       <!-- Image on Left -->
