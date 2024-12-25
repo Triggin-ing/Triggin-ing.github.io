@@ -340,21 +340,27 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 85%;
-    height: 280px;
+    width: 100%;
+    max-width: 300px; /* Consistent card width */
+    height: 300px; /* Consistent card height */
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s, filter 0.5s;
+    margin: 0 auto; /* Center-align on smaller screens */
   }
 
   .carousel-item img {
+    width: 120px; /* Fixed size for images */
+    height: 120px;
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover;
     margin-bottom: 12px;
     transition: transform 0.5s, filter 0.5s;
-    width: 140px; /* Fixed width */
-    height: 140px; /* Fixed height */
-    border-radius: 50%; /* Keeps the image circular */
-    object-fit: cover;
+  }
+
+  .carousel-item p {
+    margin-top: auto; /* Push text to the bottom */
   }
 
   .carousel-item.opacity-50 img {
@@ -373,13 +379,14 @@
       grid-template-columns: 1fr;
     }
 
-    .carousel-item img {
-      width: 100px; /* Fixed size for mobile view */
-      height: 100px;
+    .carousel-item {
+      max-width: 250px; /* Smaller width for mobile */
+      height: 300px; /* Maintain consistent height */
     }
 
-    .carousel-item {
-      height: auto; /* Allow the card to adjust to content */
+    .carousel-item img {
+      width: 100px; /* Smaller image size */
+      height: 100px;
     }
   }
 </style>
