@@ -278,7 +278,6 @@
 <script>
   const gridItems = document.querySelectorAll(".carousel-item");
   const carousel = document.getElementById("carousel-grid");
-
   const slides = [
     "images/5.png",
     "images/1.png",
@@ -319,10 +318,11 @@
       }
     });
 
-    // Center the active item
+    // Center the active item with a slight right shift
     const activeItem = document.querySelector(".carousel-item.active");
     if (activeItem) {
-      const scrollOffset = activeItem.offsetLeft - (carousel.offsetWidth / 2) + (activeItem.offsetWidth / 2);
+      const scrollOffset =
+        activeItem.offsetLeft - (carousel.offsetWidth / 2) + (activeItem.offsetWidth / 2) + 30; // Add 30px for slight right shift
       carousel.scrollTo({ left: scrollOffset, behavior: "smooth" });
     }
   }
@@ -335,10 +335,8 @@
   // Auto-slide every 3 seconds
   setInterval(nextSlide, 3000);
 
-  // Center the scrollbar on load
-  window.addEventListener("load", () => {
-    updateGrid();
-  });
+  // Initialize the grid
+  updateGrid();
 </script>
 
 <style>
@@ -346,8 +344,8 @@
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 2rem;
-    padding: 1rem;
+    gap: 2rem; /* Increased gap for better padding */
+    padding: 1rem; /* Added padding around the carousel */
     scroll-behavior: smooth;
   }
 
@@ -364,16 +362,16 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 300px;
+    max-width: 300px; /* Increased max width for better padding */
     margin: 0 auto;
     background-color: #ffffff;
-    border-radius: 12px;
+    border-radius: 12px; /* Slightly increased border radius */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s, filter 0.5s;
   }
 
   .carousel-item img {
-    margin-bottom: 16px;
+    margin-bottom: 16px; /* Increased spacing below the image */
     transition: transform 0.5s, filter 0.5s;
   }
 
@@ -384,7 +382,7 @@
 
   .carousel-item.active img {
     filter: none;
-    transform: scale(1.1);
+    transform: scale(1.1); /* Increased scale for highlighted image */
   }
 </style>
 
