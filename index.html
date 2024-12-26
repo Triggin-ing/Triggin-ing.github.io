@@ -253,21 +253,21 @@
 </section>
 
 
-<section id="who-can-use" class="py-12 sm:py-16 bg-white" data-aos="fade-up">
-  <div class="container mx-auto px-4 sm:px-6 text-center">
+<section id="who-can-use" class="py-16 bg-white" data-aos="fade-up">
+  <div class="container mx-auto px-6 sm:px-8 text-center">
 
     <!-- Carousel Wrapper -->
-    <div id="carousel-grid" class="flex overflow-x-auto gap-6 sm:grid sm:grid-cols-3 sm:gap-6">
+    <div id="carousel-grid" class="flex overflow-x-auto gap-8 sm:grid sm:grid-cols-3 sm:gap-8">
       <!-- Individual Cards -->
-      <div class="carousel-item opacity-50 transition-all duration-700 bg-white shadow-lg rounded-lg p-4 flex-shrink-0">
+      <div class="carousel-item opacity-50 transition-all duration-700 bg-white shadow-lg rounded-lg p-6 flex-shrink-0">
         <img src="images/5.png" alt="SMEs/MSMEs" class="w-40 h-40 object-cover rounded-full mb-4">
         <p class="text-lg font-semibold">SMEs/MSMEs</p>
       </div>
-      <div class="carousel-item active opacity-100 transition-all duration-700 bg-white shadow-lg rounded-lg p-4 flex-shrink-0">
+      <div class="carousel-item active opacity-100 transition-all duration-700 bg-white shadow-lg rounded-lg p-6 flex-shrink-0">
         <img src="images/1.png" alt="Large Businesses" class="w-44 h-44 object-cover rounded-full mb-4">
         <p class="text-lg font-semibold">Large Businesses</p>
       </div>
-      <div class="carousel-item opacity-50 transition-all duration-700 bg-white shadow-lg rounded-lg p-4 flex-shrink-0">
+      <div class="carousel-item opacity-50 transition-all duration-700 bg-white shadow-lg rounded-lg p-6 flex-shrink-0">
         <img src="images/2.png" alt="Franchise Owner" class="w-40 h-40 object-cover rounded-full mb-4">
         <p class="text-lg font-semibold">Franchise Owner</p>
       </div>
@@ -297,7 +297,7 @@
     "Superstockist"
   ];
 
-  let currentIndex = 1; // Highlight the center image
+  let currentIndex = 1; // Highlight the center image from the start
 
   function updateGrid() {
     gridItems.forEach((item, index) => {
@@ -317,11 +317,11 @@
       }
     });
 
-    // Ensure the highlighted item is slightly towards the left
+    // Center the active item
     const carousel = document.getElementById("carousel-grid");
     const activeItem = document.querySelector(".carousel-item.active");
     if (activeItem) {
-      const scrollOffset = activeItem.offsetLeft - (carousel.offsetWidth / 3); // Shift towards the left
+      const scrollOffset = activeItem.offsetLeft - (carousel.offsetWidth / 2) + (activeItem.offsetWidth / 2);
       carousel.scrollTo({ left: scrollOffset, behavior: "smooth" });
     }
   }
@@ -343,7 +343,8 @@
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 1.5rem;
+    gap: 2rem; /* Increased gap for better padding */
+    padding: 1rem; /* Added padding around the carousel */
     scroll-behavior: smooth;
   }
 
@@ -360,16 +361,16 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 280px;
+    max-width: 300px; /* Increased max width for better padding */
     margin: 0 auto;
     background-color: #ffffff;
-    border-radius: 8px;
+    border-radius: 12px; /* Slightly increased border radius */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s, filter 0.5s;
   }
 
   .carousel-item img {
-    margin-bottom: 12px;
+    margin-bottom: 16px; /* Increased spacing below the image */
     transition: transform 0.5s, filter 0.5s;
   }
 
@@ -380,7 +381,7 @@
 
   .carousel-item.active img {
     filter: none;
-    transform: scale(1.05);
+    transform: scale(1.1); /* Increased scale for highlighted image */
   }
 </style>
 
