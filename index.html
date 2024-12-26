@@ -298,38 +298,30 @@
   ];
 
   let currentIndex = 1; // Highlight the center image
+
   function updateGrid() {
-  gridItems.forEach((item, index) => {
-    const img = item.querySelector("img");
-    const text = item.querySelector("p");
+    gridItems.forEach((item, index) => {
+      const img = item.querySelector("img");
+      const text = item.querySelector("p");
 
-    const slideIndex = (currentIndex + index - 1 + slides.length) % slides.length;
-    img.src = slides[slideIndex];
-    text.textContent = textContent[slideIndex];
+      const slideIndex = (currentIndex + index - 1 + slides.length) % slides.length;
+      img.src = slides[slideIndex];
+      text.textContent = textContent[slideIndex];
 
-    if (index === 1) {
-      item.classList.add("active", "opacity-100");
-      item.classList.remove("opacity-50");
-    } else {
-      item.classList.remove("active", "opacity-100");
-      item.classList.add("opacity-50");
-    }
-  });
-
-  // Center the active item with a slight right shift
-  const activeItem = document.querySelector(".carousel-item.active");
-  if (activeItem) {
-    const scrollOffset =
-      activeItem.offsetLeft - (carousel.offsetWidth / 2) + (activeItem.offsetWidth / 2) + 30; // Add 30px to shift right
-    carousel.scrollTo({ left: scrollOffset, behavior: "smooth" });
+      if (index === 1) {
+        item.classList.add("active", "opacity-100");
+        item.classList.remove("opacity-50");
+      } else {
+        item.classList.remove("active", "opacity-100");
+        item.classList.add("opacity-50");
+      }
+    });
   }
-}
 
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateGrid();
-  }
+  // function nextSlide() {
+  //   currentIndex = (currentIndex + 1) % slides.length;
+  //   updateGrid();
+  // }
 
   // Auto-slide every 3 seconds
   setInterval(nextSlide, 3000);
