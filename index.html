@@ -352,14 +352,15 @@
   /* Media Query for Mobile Screens */
   @media (max-width: 768px) {
     #carousel-grid {
-      grid-template-columns: 1fr;
+      display: flex;
       overflow: hidden;
       position: relative;
     }
 
     .carousel-item {
-      width: 100%;
-      position: relative;
+      flex: 0 0 100%;
+      max-width: 100%;
+      transition: transform 0.5s;
     }
 
     .carousel-item:nth-child(1) {
@@ -374,9 +375,6 @@
 
 
 
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
@@ -384,6 +382,7 @@
 
     </script>
 </body>
+<br>
 
 <body class="bg-white-100">
 
@@ -391,7 +390,7 @@
     <div class="fixed top-0 left-0 w-full h-1 bg-blue-500" id="progress-bar"></div>
 
     <!-- Section 1 -->
-    <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-start" style="animation: fadeIn 1s ease-in-out;">
+    <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-start bg-green-100 rounded-xl shadow-md space-y-6 lg:space-y-0 lg:space-x-6" style="animation: fadeIn 1s ease-in-out;">
         <!-- Image on Left -->
         <!-- <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0 hover:animate-spin" style="animation: slideIn 1s ease-in-out;">
             <img src="images/12.png" alt="App Screenshot" class="w-full lg:w-3/4">
@@ -435,8 +434,9 @@
             </div>
         </div>
     </section>
+    <br>
 
-    <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-center" style="animation: fadeIn 1s ease-in-out;">
+    <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-center bg-pink-100 rounded-xl shadow-md space-y-6 lg:space-y-0 lg:space-x-6" style="animation: fadeIn 1s ease-in-out;">
       <!-- Image on Left -->
       <!-- <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0" style="animation: slideIn 1s ease-in-out;">
           <img src="images/14.png" alt="Analytics Image" class="w-full lg:w-3/4">
@@ -485,9 +485,9 @@
   </section>
 
    
+<br>
 
-
-  <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-center" style="animation: fadeIn 1s ease-in-out;">
+  <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-center bg-purple-100 rounded-xl shadow-md space-y-6 lg:space-y-0 lg:space-x-6" style="animation: fadeIn 1s ease-in-out;">
     <!-- Image on Left -->
     <!-- <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0" style="animation: slideIn 1s ease-in-out;">
         <img src="images/14.png" alt="Analytics Image" class="w-full lg:w-3/4">
@@ -529,8 +529,8 @@
     </div>
 </section>
   
-
-    <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-center" style="animation: fadeIn 1s ease-in-out;">
+<br>
+    <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-center bg-yellow-50 rounded-xl shadow-md space-y-6 lg:space-y-0 lg:space-x-6" style="animation: fadeIn 1s ease-in-out;">
       <!-- Image on Left -->
       <!-- <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0" style="animation: slideIn 1s ease-in-out;">
           <img src="images/14.png" alt="Analytics Image" class="w-full lg:w-3/4">
