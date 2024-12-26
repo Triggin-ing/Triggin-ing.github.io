@@ -316,6 +316,14 @@
         item.classList.add("opacity-50");
       }
     });
+
+    // Ensure the highlighted item is centered
+    const carousel = document.getElementById("carousel-grid");
+    const activeItem = document.querySelector(".carousel-item.active");
+    if (activeItem) {
+      const scrollOffset = activeItem.offsetLeft - (carousel.offsetWidth / 2) + (activeItem.offsetWidth / 2);
+      carousel.scrollTo({ left: scrollOffset, behavior: "smooth" });
+    }
   }
 
   function nextSlide() {
@@ -336,6 +344,7 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 1.5rem;
+    scroll-behavior: smooth;
   }
 
   @media (min-width: 640px) {
