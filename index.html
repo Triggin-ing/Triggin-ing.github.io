@@ -253,117 +253,108 @@
 </section>
 
 
-<section id="who-can-use" class="py-12 sm:py-16 bg-white">
+<section id="carousel-section" class="py-12 sm:py-16 bg-white">
   <div class="container mx-auto px-4 sm:px-6 text-center">
-    <!-- Header -->
-    <h2 class="text-2xl font-semibold mb-6">Our Blogs</h2>
-
-    <!-- Grid Layout -->
-    <div id="carousel-grid" class="grid grid-cols-1 gap-6">
-      <!-- Individual Cards -->
-      <div class="carousel-item active opacity-100 transition-all duration-700 bg-white shadow-lg rounded-lg p-4">
-        <img src="images/1.png" alt="Credit Card" class="w-full h-40 object-cover rounded-lg mb-4">
-        <p class="text-sm text-orange-600 font-semibold">Credit Card</p>
-        <p class="text-lg font-bold">Top Reasons To Use Credit Card To Pay Housing Rent</p>
+    <h2 class="text-2xl font-bold mb-6">Our Audience</h2>
+    <!-- Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="images/5.png" alt="SMEs/MSMEs" class="w-40 h-40 object-cover rounded-full mb-4">
+          <p class="text-lg font-semibold">SMEs/MSMEs</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/1.png" alt="Large Businesses" class="w-44 h-44 object-cover rounded-full mb-4">
+          <p class="text-lg font-semibold">Large Businesses</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/2.png" alt="Franchise Owner" class="w-40 h-40 object-cover rounded-full mb-4">
+          <p class="text-lg font-semibold">Franchise Owner</p>
+        </div>
+        <!-- Add more slides as needed -->
       </div>
-      <div class="carousel-item opacity-50 transition-all duration-700 bg-white shadow-lg rounded-lg p-4">
-        <img src="images/2.png" alt="Feature 2" class="w-full h-40 object-cover rounded-lg mb-4">
-        <p class="text-sm text-orange-600 font-semibold">Feature 2</p>
-        <p class="text-lg font-bold">Another Blog Title Here</p>
-      </div>
-      <div class="carousel-item opacity-50 transition-all duration-700 bg-white shadow-lg rounded-lg p-4">
-        <img src="images/3.png" alt="Feature 3" class="w-full h-40 object-cover rounded-lg mb-4">
-        <p class="text-sm text-orange-600 font-semibold">Feature 3</p>
-        <p class="text-lg font-bold">Third Blog Title Example</p>
-      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </div>
-</section>
 
-<script>
-  const gridItems = document.querySelectorAll(".carousel-item");
-  const slides = [
-    { src: "images/1.png", category: "Credit Card", title: "Top Reasons To Use Credit Card To Pay Housing Rent" },
-    { src: "images/2.png", category: "Feature 2", title: "Another Blog Title Here" },
-    { src: "images/3.png", category: "Feature 3", title: "Third Blog Title Example" }
-  ];
+  <style>
+    .swiper-container {
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
 
-  let currentIndex = 0;
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 280px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.5s, filter 0.5s;
+    }
 
-  function updateGrid() {
-    gridItems.forEach((item, index) => {
-      const img = item.querySelector("img");
-      const category = item.querySelector("p:first-of-type");
-      const title = item.querySelector("p:last-of-type");
+    .swiper-slide img {
+      margin-bottom: 12px;
+      transition: transform 0.5s, filter 0.5s;
+    }
 
-      const slideIndex = (currentIndex + index) % slides.length;
-      img.src = slides[slideIndex].src;
-      category.textContent = slides[slideIndex].category;
-      title.textContent = slides[slideIndex].title;
+    .swiper-slide-active img {
+      filter: none;
+      transform: scale(1.05);
+    }
 
-      if (index === 0) {
-        item.classList.add("active", "opacity-100");
-        item.classList.remove("opacity-50");
-      } else {
-        item.classList.remove("active", "opacity-100");
-        item.classList.add("opacity-50");
-      }
+    .swiper-slide:not(.swiper-slide-active) img {
+      filter: grayscale(100%);
+      transform: scale(0.9);
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #000;
+    }
+
+    .swiper-pagination-bullet {
+      background: #000;
+    }
+  </style>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        }
+      },
     });
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateGrid();
-  }
-
-  // Auto-slide every 3 seconds
-  setInterval(nextSlide, 3000);
-
-  // Initialize the grid
-  updateGrid();
-</script>
-
-<style>
-  #carousel-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1.5rem;
-  }
-
-  .carousel-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.5s, transform 0.5s;
-  }
-
-  .carousel-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  .carousel-item.opacity-50 {
-    opacity: 0.5;
-  }
-
-  .carousel-item.active {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-
-  p {
-    margin: 0;
-  }
-
-  .text-orange-600 {
-    color: #f97316;
-  }
-</style>
+  </script>
+</section>
 
 
 
