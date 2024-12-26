@@ -332,13 +332,13 @@
 <style>
   #carousel-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr); /* Mobile: one item visible */
     gap: 1.5rem;
   }
 
   @media (min-width: 640px) {
     #carousel-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr); /* Tablet and above: three items visible */
     }
   }
 
@@ -347,13 +347,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 85%;
-    height: 280px;
+    width: 100%; /* Ensures full width on mobile */
+    height: 320px; /* Increased height for mobile view */
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s, filter 0.5s;
-    margin: 0 auto;
   }
 
   .carousel-item img {
@@ -368,28 +367,20 @@
 
   .carousel-item.active img {
     filter: none;
-    transform: scale(1.05);
+    transform: scale(1.1); /* Slightly larger for the active item */
   }
 
-  /* Adjust heights and scaling for mobile */
+  /* Adjust text and spacing for mobile */
   @media (max-width: 639px) {
     .carousel-item {
-      height: 240px;
+      height: 340px; /* Slightly taller for readability */
     }
     .carousel-item img {
-      width: 80px;
-      height: 80px;
+      width: 120px;
+      height: 120px;
     }
-  }
-
-  /* Adjust heights and scaling for tablets */
-  @media (min-width: 640px) and (max-width: 1024px) {
-    .carousel-item {
-      height: 260px;
-    }
-    .carousel-item img {
-      width: 100px;
-      height: 100px;
+    .carousel-item p {
+      font-size: 1.2rem;
     }
   }
 </style>
