@@ -163,6 +163,11 @@
     .link a:hover {
       text-decoration: underline;
     }
+    .active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
   </style>
 </head>
 <body>
@@ -176,7 +181,7 @@
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav  data-aos="zoom-out" data-aos-duration="2000" class="hidden md:flex space-x-4 sm:space-x-6">
+        <nav   class="hidden md:flex space-x-4 sm:space-x-6">
           <a href="../index.html" class="text-gray-600 hover:text-blue-600" style="font-style:bold;">Home</a>
             <!-- <a href="work.html" class="text-gray-600 hover:text-blue-600">How it Works</a>
             <div class="dropdown">
@@ -191,7 +196,7 @@
             <!-- <a href="resources.html" class="text-gray-600 hover:text-blue-600">Resources</a> -->
             <!-- <a href="pricing.html" class="text-gray-600 hover:text-blue-600">Pricing</a> -->
             <a href="contact.html" class="text-gray-600 hover:text-blue-600">Contact Us</a>
-            <a href="../tryTriggin.html" class="text-gray-600 hover:text-blue-600">Try Triggin</a>
+            <a href="../try.html" class="text-gray-600 hover:text-blue-600 ">Try Triggin</a>
             <!-- <a href="login.html" class="text-gray-600 hover:text-blue-600">Login</a> -->
         </nav>
 
@@ -204,7 +209,7 @@
 
         <!-- <a href="tryTriggin.html">Try Triggin</a> Button (Visible on all screen sizes) -->
         <div class="hidden md:flex space-x-4">
-          <a href="login.html"><button class="bg-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded transition-all duration-300 transform hover:scale-105">Login</button></a>
+          <a href="login.html"><button class="bg-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded transition-all duration-300 transform hover:scale-105 active">Login</button></a>
         </div>
     </div>
 
@@ -226,8 +231,8 @@
             <!-- <a href="resources.html" class="text-gray-600 hover:text-blue-600">Resources</a> -->
             <!-- <a href="pricing.html" class="text-gray-600 hover:text-blue-600">Pricing</a> -->
             <a href="contact.html" class="text-gray-600 hover:text-blue-600">Contact Us</a>
-            <a href="login.html" class="text-gray-600 hover:text-blue-600">Login</a>
-            <button class="bg-red-500 text-white px-4 py-2 rounded transition-all duration-300 transform hover:scale-105"><a href="../tryTriggin.html">Try Triggin</a></button>
+            <a href="login.html" class="text-gray-600 hover:text-blue-600 active">Login</a>
+            <button class="bg-red-500 text-white px-4 py-2 rounded transition-all duration-300 transform hover:scale-105 active"><a href="../try.html">Try Triggin</a></button>
         </div>
     </nav>
 </header>
