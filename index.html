@@ -321,7 +321,7 @@
     </div>
     <div class="w-full sm:w-1/5 flex-shrink-0 p-4">
       <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <img src="image4.jpg" alt="Image 4" class="w-full h-40 object-cover">
+        <img src="image4.jpg" alt="Image 6" class="w-full h-40 object-cover">
         <div class="p-4">
           <p class="text-sm text-orange-600 font-semibold">Money management</p>
           <h3 class="mt-1 text-lg font-bold text-gray-800">
@@ -332,7 +332,7 @@
     </div>
     <div class="w-full sm:w-1/5 flex-shrink-0 p-4">
       <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <img src="image5.jpg" alt="Image 5" class="w-full h-40 object-cover">
+        <img src="image5.jpg" alt="Image 7" class="w-full h-40 object-cover">
         <div class="p-4">
           <p class="text-sm text-orange-600 font-semibold">Credit card</p>
           <h3 class="mt-1 text-lg font-bold text-gray-800">
@@ -371,6 +371,10 @@ let currentIndex = 0;
 let itemsToShow = window.innerWidth < 640 ? 1 : 5; // Default: 1 item for mobile, 5 for desktop
 const items = document.querySelectorAll("#carousel > div");
 const totalItems = items.length;
+
+let startX = 0;
+let isSwiping = false;
+let swipeThreshold = 50; // Minimum swipe distance to trigger navigation
 
 // Function to update the carousel's position
 function updateCarousel() {
@@ -419,6 +423,43 @@ nextBtn.addEventListener("click", () => {
   if (currentIndex > totalItems - itemsToShow) {
     currentIndex = 0; // Wrap back to the start
   }
+  updateCarousel();
+});
+
+// Swipe functionality
+carousel.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+  isSwiping = true;
+});
+
+carousel.addEventListener("touchmove", (e) => {
+  if (!isSwiping) return;
+  const currentX = e.touches[0].clientX;
+  const diff = currentX - startX;
+
+  // Add slight translation during swipe for visual feedback
+  const slideWidth = carousel.clientWidth / itemsToShow;
+  const offset = -(currentIndex * slideWidth) + diff;
+  carousel.style.transition = "none";
+  carousel.style.transform = `translateX(${offset}px)`;
+});
+
+carousel.addEventListener("touchend", (e) => {
+  const endX = e.changedTouches[0].clientX;
+  const diff = endX - startX;
+  isSwiping = false;
+
+  if (Math.abs(diff) > swipeThreshold) {
+    // Determine swipe direction
+    if (diff > 0) {
+      currentIndex--; // Swipe right
+    } else {
+      currentIndex++; // Swipe left
+    }
+  }
+
+  // Restore transition and update carousel
+  carousel.style.transition = "transform 0.3s ease-in-out";
   updateCarousel();
 });
 
