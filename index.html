@@ -291,9 +291,9 @@
         <img src="images/3.png" alt="Image 3" class="w-full h-40 object-cover">
         <div class="p-4">
           <!-- <p class="text-sm text-orange-600 font-semibold">Credit card</p> -->
-          <h4 class="mt-1 text-lg font-bold text-gray-800">
+          <h6 class="mt-1 text-lg font-bold text-gray-800">
             Dealers & Distributors
-          </h4>
+          </h6>
         </div>
       </div>
     </div>
@@ -473,84 +473,6 @@ updateCarousel();
 
 
 
-<section class="relative w-full overflow-hidden">
-  <!-- Carousel Container -->
-  <div id="carousel" class="flex transition-transform duration-300 ease-in-out">
-    <!-- Original Images -->
-    <div class="w-1/4 flex-shrink-0 p-2"><img src="image1.jpg" alt="Image 1" class="rounded-lg shadow-md"></div>
-    <div class="w-1/4 flex-shrink-0 p-2"><img src="image2.jpg" alt="Image 2" class="rounded-lg shadow-md"></div>
-    <div class="w-1/4 flex-shrink-0 p-2"><img src="image3.jpg" alt="Image 3" class="rounded-lg shadow-md"></div>
-    <div class="w-1/4 flex-shrink-0 p-2"><img src="image4.jpg" alt="Image 4" class="rounded-lg shadow-md"></div>
-    <div class="w-1/4 flex-shrink-0 p-2"><img src="image5.jpg" alt="Image 5" class="rounded-lg shadow-md"></div>
-    <div class="w-1/4 flex-shrink-0 p-2"><img src="image6.jpg" alt="Image 6" class="rounded-lg shadow-md"></div>
-    <div class="w-1/4 flex-shrink-0 p-2"><img src="image7.jpg" alt="Image 7" class="rounded-lg shadow-md"></div>
-  </div>
-  <!-- Navigation Buttons -->
-  <button id="prev" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md">
-    &larr;
-  </button>
-  <button id="next" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md">
-    &rarr;
-  </button>
-</section>
-<script>
-  const carousel = document.getElementById("carousel");
-const nextButton = document.getElementById("next");
-const prevButton = document.getElementById("prev");
-
-let currentIndex = 0; // Track the current starting index of visible images
-const totalItems = carousel.children.length; // Total number of images
-const itemsToShow = 4; // Number of images to show at a time
-
-function updateCarousel() {
-  // Calculate the amount to translate based on the current index
-  carousel.style.transform = `translateX(-${(currentIndex * 100) / itemsToShow}%)`;
-}
-
-// Handle the next button click
-nextButton.addEventListener("click", () => {
-  if (currentIndex + itemsToShow < totalItems) {
-    currentIndex++; // Move to the next image
-  } else {
-    // Wrap to the beginning if we're at the end
-    currentIndex = 0;
-  }
-  updateCarousel();
-});
-
-// Handle the previous button click
-prevButton.addEventListener("click", () => {
-  if (currentIndex > 0) {
-    currentIndex--; // Move to the previous image
-  } else {
-    // Wrap to the end if we're at the beginning
-    currentIndex = totalItems - itemsToShow;
-  }
-  updateCarousel();
-});
-
-// Swipe support for mobile
-let startX = 0;
-
-carousel.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-});
-
-carousel.addEventListener("touchend", (e) => {
-  const endX = e.changedTouches[0].clientX;
-  if (endX < startX - 50) {
-    // Swipe left
-    nextButton.click();
-  } else if (endX > startX + 50) {
-    // Swipe right
-    prevButton.click();
-  }
-});
-
-// Initialize the carousel
-updateCarousel();
-
-</script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
