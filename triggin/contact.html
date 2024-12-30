@@ -65,6 +65,7 @@
       /* min-height: 100vh; */
       background: linear-gradient(135deg, #c9d6eb, #d0e7e7);
     }
+    
 
     header {
             /* background-color:  #d5f4ff; */
@@ -194,31 +195,32 @@ header .container{
     </style>
 </head>
 <body>
-    <header class="bg-white shadow-md top-0 z-50">
+    <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center p-4 sm:p-6">
             <!-- Logo -->
             <a href="../index.html" class="flex items-center space-x-1">
-                <img data-aos="zoom-out" data-aos-duration="1000" src="../images/Logo.jpeg.jpg" alt="Triggin Logo" class="h-12 w-12 "> <!-- Logo Image -->
+                <img data-aos="zoom-out" data-aos-duration="1000" src="../images/Logo.jpeg.jpg" alt="Triggin Logo" class="h-12 w-12"> <!-- Logo Image -->
                 <span class="text-xl sm:text-2xl font-bold text-gray-800">Triggin</span> <!-- Company Name -->
-              </a>
+            </a>
     
             <!-- Desktop Navigation Links -->
-            <nav class="hidden md:flex space-x-4 sm:space-x-6">
-                <a href="../index.html" class="text-gray-600 hover:text-blue-600" style="font-style:bold;">Home</a>
-                <!-- <a href="work.html" class="text-gray-600 hover:text-blue-600">How it Works</a>
-                <div class="dropdown">
-                    <h3 class="dropdown-txt" >Resources</h3>
-                   
-                        <div class="dropdown-content">
-                            <a href="../events.html">Events</a>
-                            <a href="../blog.html">Blog</a>
-                            <a href="../productUpdates.html">Webinars</a>
-                          </div>
+            <nav class="hidden md:flex space-x-4 sm:space-x-6 ml-auto items-center">
+                <!-- <a href="triggin/work.html" class="text-gray-600 hover:text-blue-600">How it Works</a> -->
+                <!-- <div class="dropdown">
+                    <h3 class="dropdown-txt">Resources</h3>
+                    <div class="dropdown-content">
+                        <a href="events.html">Events</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="productUpdates.html">Webinars</a>
+                    </div>
                 </div> -->
-                <!-- <a href="resources.html" class="text-gray-600 hover:text-blue-600">Resources</a> -->
-                <!-- <a href="pricing.html" class="text-gray-600 hover:text-blue-600">Pricing</a> -->
-                <a href="contact.html" class="text-gray-600 hover:text-blue-600 active">Contact Us</a>
-                <a href="../try.html" class="text-gray-600 hover:text-blue-600 ">Try Triggin</a>
+                <!-- <a href="triggin/resources.html" class="text-gray-600 hover:text-blue-600">Resources</a> -->
+                <!-- <a href="triggin/pricing.html" class="text-gray-600 hover:text-blue-600">Pricing</a> -->
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600">Contact Us</a>
+                <a href="../try.html" class="text-gray-600 hover:text-blue-600">Try Triggin</a>
+                <a href="login.html">
+                    <button class="bg-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded transition-all duration-300 transform hover:scale-105">Login</button>
+                </a>
             </nav>
     
             <!-- Mobile Menu Button (Hamburger Icon) -->
@@ -227,36 +229,29 @@ header .container{
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
-    
-            <!-- <a href="tryTriggin.html">Try Triggin</a> Button (Visible on all screen sizes) -->
-            <div class="hidden md:flex space-x-4">
-                <a href="login.html"><button class="bg-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded transition-all duration-300 transform hover:scale-105">Login</button></a>
-            </div>
         </div>
     
         <!-- Mobile Navigation Menu -->
         <nav id="mobile-menu" class="md:hidden bg-white shadow-md hidden">
             <div class="flex flex-col space-y-2 p-4">
-                <a href="../index.html" class="text-gray-600 hover:text-blue-600" style="font-style:bold;">Home</a>
-                <!-- <a href="work.html" class="text-gray-600 hover:text-blue-600">How it Works</a>
-                <div class="dropdown">
-                    <h3 class="dropdown-txt" >Resources</h3>
-                   
-                        <div class="dropdown-content">
-                            <a href="../events.html">Events</a>
-                            <a href="../blog.html">Blog</a>
-                            <a href="../productUpdates.html">Webinars</a>
-                          </div>
+                <!-- <a href="triggin/work.html" class="text-gray-600 hover:text-blue-600">How it Works</a> -->
+                <!-- <div class="dropdown">
+                    <h3 class="dropdown-txt">Resources</h3>
+                    <div class="dropdown-content">
+                        <a href="events.html">Events</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="productUpdates.html">Webinars</a>
+                    </div>
                 </div> -->
-                <!-- <a href="resources.html" class="text-gray-600 hover:text-blue-600">Resources</a> -->
-                <!-- <a href="pricing.html" class="text-gray-600 hover:text-blue-600">Pricing</a> -->
+                <!-- <a href="triggin/resources.html" class="text-gray-600 hover:text-blue-600">Resources</a> -->
+                <!-- <a href="triggin/pricing.html" class="text-gray-600 hover:text-blue-600">Pricing</a> -->
                 <a href="contact.html" class="text-gray-600 hover:text-blue-600">Contact Us</a>
+                <a href="../try.html" class="text-gray-600 hover:text-blue-600">Try Triggin</a>
                 <a href="login.html" class="text-gray-600 hover:text-blue-600">Login</a>
-                <button class="bg-red-500 text-white px-4 py-2 rounded transition-all duration-300 transform hover:scale-105 "><a href="../try.html">Try Triggin</a></button>
             </div>
         </nav>
     </header>
-
+    
     <script>
         const mobileMenuButton = document.getElementById("mobile-menu-button");
         const mobileMenu = document.getElementById("mobile-menu");
