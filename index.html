@@ -327,116 +327,149 @@
   </div>
 </section>
 
-
 <script>
   const carousel = document.getElementById("carousel");
-const dots = document.getElementById("dots");
-const prevBtn = document.getElementById("prev");
-const nextBtn = document.getElementById("next");
+  const dots = document.getElementById("dots");
+  const prevBtn = document.getElementById("prev");
+  const nextBtn = document.getElementById("next");
 
-let currentIndex = 0;
-let itemsToShow = window.innerWidth < 640 ? 1 : 5; // Default: 1 item for mobile, 5 for desktop
-const items = document.querySelectorAll("#carousel > div");
-const totalItems = items.length;
+  let currentIndex = 0;
+  let itemsToShow = window.innerWidth < 640 ? 1 : 5; // Default: 1 item for mobile, 5 for desktop
+  const items = document.querySelectorAll("#carousel > div");
+  const totalItems = items.length;
 
-let startX = 0;
-let isSwiping = false;
-let swipeThreshold = 50; // Minimum swipe distance to trigger navigation
+  let startX = 0;
+  let isSwiping = false;
+  let swipeThreshold = 50; // Minimum swipe distance to trigger navigation
+  let isDragging = false;
+  let dragStartX = 0;
+  let dragOffset = 0;
 
-// Function to update the carousel's position
-function updateCarousel() {
-  const slideWidth = carousel.clientWidth / itemsToShow;
-  const maxIndex = totalItems - itemsToShow; // Max starting index
-  currentIndex = Math.max(0, Math.min(currentIndex, maxIndex)); // Ensure index stays within bounds
-  const offset = -(currentIndex * slideWidth);
-  carousel.style.transform = `translateX(${offset}px)`;
+  // Function to update the carousel's position
+  function updateCarousel() {
+    const slideWidth = carousel.clientWidth / itemsToShow;
+    const maxIndex = totalItems - itemsToShow; // Max starting index
+    currentIndex = Math.max(0, Math.min(currentIndex, maxIndex)); // Ensure index stays within bounds
+    const offset = -(currentIndex * slideWidth);
+    carousel.style.transform = `translateX(${offset}px)`;
 
-  // Update dots
-  const activeDotIndex = currentIndex + Math.floor(itemsToShow / 2);
-  Array.from(dots.children).forEach((dot, index) => {
-    dot.classList.toggle("bg-gray-800", index === activeDotIndex);
-    dot.classList.toggle("bg-gray-400", index !== activeDotIndex);
-  });
-}
-
-// Create dots
-function createDots() {
-  dots.innerHTML = "";
-  for (let i = 0; i < totalItems; i++) {
-    const dot = document.createElement("button");
-    dot.classList.add("w-2", "h-2", "rounded-full", "bg-gray-400");
-    dots.appendChild(dot);
+    // Update dots
+    const activeDotIndex = currentIndex + Math.floor(itemsToShow / 2);
+    Array.from(dots.children).forEach((dot, index) => {
+      dot.classList.toggle("bg-gray-800", index === activeDotIndex);
+      dot.classList.toggle("bg-gray-400", index !== activeDotIndex);
+    });
   }
-  updateCarousel();
-}
 
-// Handle resizing
-window.addEventListener("resize", () => {
-  itemsToShow = window.innerWidth < 640 ? 1 : 5;
-  updateCarousel();
-});
-
-// Event listeners for navigation buttons
-prevBtn.addEventListener("click", () => {
-  currentIndex--;
-  if (currentIndex < 0) {
-    currentIndex = totalItems - itemsToShow; // Wrap to the end
-  }
-  updateCarousel();
-});
-
-nextBtn.addEventListener("click", () => {
-  currentIndex++;
-  if (currentIndex > totalItems - itemsToShow) {
-    currentIndex = 0; // Wrap back to the start
-  }
-  updateCarousel();
-});
-
-// Swipe functionality
-carousel.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-  isSwiping = true;
-});
-
-carousel.addEventListener("touchmove", (e) => {
-  if (!isSwiping) return;
-  const currentX = e.touches[0].clientX;
-  const diff = currentX - startX;
-
-  // Add slight translation during swipe for visual feedback
-  const slideWidth = carousel.clientWidth / itemsToShow;
-  const offset = -(currentIndex * slideWidth) + diff;
-  carousel.style.transition = "none";
-  carousel.style.transform = `translateX(${offset}px)`;
-});
-
-carousel.addEventListener("touchend", (e) => {
-  const endX = e.changedTouches[0].clientX;
-  const diff = endX - startX;
-  isSwiping = false;
-
-  if (Math.abs(diff) > swipeThreshold) {
-    // Determine swipe direction
-    if (diff > 0) {
-      currentIndex--; // Swipe right
-    } else {
-      currentIndex++; // Swipe left
+  // Create dots
+  function createDots() {
+    dots.innerHTML = "";
+    for (let i = 0; i < totalItems; i++) {
+      const dot = document.createElement("button");
+      dot.classList.add("w-2", "h-2", "rounded-full", "bg-gray-400");
+      dots.appendChild(dot);
     }
+    updateCarousel();
   }
 
-  // Restore transition and update carousel
-  carousel.style.transition = "transform 0.3s ease-in-out";
+  // Handle resizing
+  window.addEventListener("resize", () => {
+    itemsToShow = window.innerWidth < 640 ? 1 : 5;
+    updateCarousel();
+  });
+
+  // Event listeners for navigation buttons
+  prevBtn.addEventListener("click", () => {
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = totalItems - itemsToShow; // Wrap to the end
+    }
+    updateCarousel();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex++;
+    if (currentIndex > totalItems - itemsToShow) {
+      currentIndex = 0; // Wrap back to the start
+    }
+    updateCarousel();
+  });
+
+  // Swipe functionality
+  carousel.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    isSwiping = true;
+  });
+
+  carousel.addEventListener("touchmove", (e) => {
+    if (!isSwiping) return;
+    const currentX = e.touches[0].clientX;
+    const diff = currentX - startX;
+
+    // Add slight translation during swipe for visual feedback
+    const slideWidth = carousel.clientWidth / itemsToShow;
+    const offset = -(currentIndex * slideWidth) + diff;
+    carousel.style.transition = "none";
+    carousel.style.transform = `translateX(${offset}px)`;
+  });
+
+  carousel.addEventListener("touchend", (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = endX - startX;
+    isSwiping = false;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      // Determine swipe direction
+      if (diff > 0) {
+        currentIndex--; // Swipe right
+      } else {
+        currentIndex++; // Swipe left
+      }
+    }
+
+    // Restore transition and update carousel
+    carousel.style.transition = "transform 0.3s ease-in-out";
+    updateCarousel();
+  });
+
+  // Drag functionality for larger screens
+  carousel.addEventListener("mousedown", (e) => {
+    if (window.innerWidth < 640) return; // Disable drag for smaller screens
+    isDragging = true;
+    dragStartX = e.clientX;
+    carousel.style.transition = "none";
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    const diff = e.clientX - dragStartX;
+    const slideWidth = carousel.clientWidth / itemsToShow;
+    dragOffset = -(currentIndex * slideWidth) + diff;
+    carousel.style.transform = `translateX(${dragOffset}px)`;
+  });
+
+  window.addEventListener("mouseup", () => {
+    if (!isDragging) return;
+    isDragging = false;
+    const slideWidth = carousel.clientWidth / itemsToShow;
+    const diff = dragOffset + currentIndex * slideWidth;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        currentIndex--;
+      } else {
+        currentIndex++;
+      }
+    }
+
+    carousel.style.transition = "transform 0.3s ease-in-out";
+    updateCarousel();
+  });
+
+  // Initialize
+  createDots();
   updateCarousel();
-});
-
-// Initialize
-createDots();
-updateCarousel();
-
 </script>
-
-
 
 
 
