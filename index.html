@@ -43,17 +43,20 @@
               </a>
           </nav>
   
-          <!-- Login Button for Mobile -->
-          <a href="triggin/login.html" class="md:hidden mr-2">
-              <button class="bg-red-500 text-white px-4 py-2 rounded transition-all duration-300 transform hover:scale-105">Login</button>
-          </a>
+          <!-- Mobile Menu and Login -->
+          <div class="flex items-center space-x-2 md:hidden">
+              <!-- Login Button -->
+              <a href="triggin/login.html">
+                  <button class="bg-red-500 text-white px-4 py-2 rounded transition-all duration-300 transform hover:scale-105">Login</button>
+              </a>
   
-          <!-- Mobile Menu Button (Hamburger Icon) -->
-          <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-          </button>
+              <!-- Mobile Menu Button (Hamburger Icon) -->
+              <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+              </button>
+          </div>
       </div>
   
       <!-- Mobile Navigation Menu -->
