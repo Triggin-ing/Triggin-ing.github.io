@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2B Buyer and Seller Profiles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
+            color: #007BFF;
+        }
+        form {
+            margin-top: 10px;
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>B2B Buyer and Seller Profiles</h1>
+    </header>
+    <div class="container">
+        <!-- Buyer Profile Section -->
+        <div class="section">
+            <h2>Buyer Profile</h2>
+            <form id="buyerProfileForm">
+                <label for="buyerBusinessName">Business Name</label>
+                <input type="text" id="buyerBusinessName" name="buyerBusinessName" placeholder="Enter your business name" required>
+
+                <label for="buyerContactDetails">Contact Details</label>
+                <input type="text" id="buyerContactDetails" name="buyerContactDetails" placeholder="Enter contact details" required>
+
+                <label for="buyerPreferences">Preferred Product Categories</label>
+                <textarea id="buyerPreferences" name="buyerPreferences" placeholder="Enter preferred product categories"></textarea>
+
+                <label for="buyerPaymentMethod">Payment Method Setup</label>
+                <select id="buyerPaymentMethod" name="buyerPaymentMethod">
+                    <option value="creditTerms">Credit Terms</option>
+                    <option value="bankDetails">Bank Transfer</option>
+                </select>
+
+                <button type="submit">Save Buyer Profile</button>
+            </form>
+        </div>
+
+        <!-- Seller Profile Section -->
+        <div class="section">
+            <h2>Seller Profile</h2>
+            <form id="sellerProfileForm">
+                <label for="sellerBusinessName">Business Name</label>
+                <input type="text" id="sellerBusinessName" name="sellerBusinessName" placeholder="Enter your business name" required>
+
+                <label for="sellerWarehouseLocation">Warehouse Location</label>
+                <input type="text" id="sellerWarehouseLocation" name="sellerWarehouseLocation" placeholder="Enter warehouse location" required>
+
+                <label for="sellerContactDetails">Contact Details</label>
+                <input type="text" id="sellerContactDetails" name="sellerContactDetails" placeholder="Enter contact details" required>
+
+                <label for="sellerCatalog">Catalog Setup</label>
+                <textarea id="sellerCatalog" name="sellerCatalog" placeholder="Describe your catalog setup"></textarea>
+
+                <label for="sellerPricing">Pricing Options</label>
+                <input type="text" id="sellerPricing" name="sellerPricing" placeholder="Enter pricing options">
+
+                <label for="sellerShipping">Shipping Options</label>
+                <textarea id="sellerShipping" name="sellerShipping" placeholder="Enter shipping options"></textarea>
+
+                <button type="submit">Save Seller Profile</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

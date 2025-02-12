@@ -1,0 +1,75 @@
+{
+  "company": {
+    "name": "RL Enterprises",
+    "address": "2-1-3 Manatha Nagar, Nagole, Hyderabad, Telangana, PIN: 500068",
+    "phone": "9493331365",
+    "email": "rlenterprises999@gmail.com",
+    "gstin": "36DVKPM5281Z2Z0"
+  },
+  "invoice": {
+    "number": "951",
+    "date": "13-12-2024",
+    "placeOfSupply": "36-Telangana"
+  },
+  "buyer": {
+    "name": "SK Frozen Foods",
+    "address": "Plot No 11, Sy No 3-4-5 Kapra Hyderabad"
+  },
+  "items": [
+    {
+      "id": 1,
+      "name": "Chilli Garlic Potato Shots 1.5 kg",
+      "hsn": "20049000",
+      "quantity": 2,
+      "price": 241.5,
+      "amount": 483
+    },
+    {
+      "id": 2,
+      "name": "Chicken Nuggets Polybags 1kg",
+      "hsn": "16010000",
+      "quantity": 1,
+      "price": 299.0,
+      "amount": 299
+    },
+    {
+      "id": 3,
+      "name": "Chicken Momos 20gm",
+      "hsn": "16010000",
+      "quantity": 2,
+      "price": 166.0,
+      "amount": 332
+    },
+    {
+      "id": 4,
+      "name": "French Fries 6mm 2.5kg",
+      "hsn": "20049000",
+      "quantity": 1,
+      "price": 320.0,
+      "amount": 320
+    },
+    {
+      "id": 5,
+      "name": "Potato Kiev 500gm",
+      "hsn": "20049000",
+      "quantity": 2,
+      "price": 140.88,
+      "amount": 281.76
+    },
+    {
+      "id": 6,
+      "name": "Chicken Popcorns Polybags 1kg",
+      "hsn": "16010000",
+      "quantity": 1,
+      "price": 311.0,
+      "amount": 311
+    }
+  ],
+  "totals": {
+    "subTotal": 2026.76,
+    "sgst": 182.41,
+    "cgst": 182.41,
+    "roundOff": 0.18,
+    "total": 2027.0
+  }
+}

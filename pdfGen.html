@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Tax Invoice</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 10px;
+      justify-content: center;
+    }
+    .container {
+      max-width: auto;
+      margin: 0 auto;
+      padding: 5px;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .info {
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    button {
+      margin-top: 15px;
+      width: 200px;
+      padding: 5px;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #invoice {
+      display: none; /* Keep it hidden */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="order-info" class="info">
+      <!-- Order details will be displayed here -->
+    </div>
+  </div>
+
+  <div id="invoice" style="justify-content: center;">
+    <!-- Full invoice content for PDF generation -->
+  </div>
+
+  <script>
+    async function fetchInvoiceData() {
+      try {
+        const response = await fetch('data.json'); // Update this with the correct path to your JSON file
+        const data = await response.json();
+
+        const orderInfo = document.getElementById('order-info');
+        orderInfo.innerHTML = `
+          <h3>Order Number: ${data.invoice.number}</h3>
+          <h3>Company Name: ${data.company.name}</h3>
+          <button onclick="generateInvoice()">Download Invoice</button>
+          <button onclick="downloadExcel()">Download Items as Excel</button>
+        `;
+
+        const invoiceContainer = document.getElementById('invoice');
+        invoiceContainer.innerHTML = `
+          <div style="font-family: Arial, sans-serif; width: 80mm; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-radius: 8px;">
+            <div class="header" style="text-align: center; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-bottom: 10px;">
+              <h2 style="color: black; margin: 0; font-size: 16px;">Tax Invoice</h2>
+              <p style="margin: 5px 0; font-size: 12px;">${data.company.name}</p>
+              <p style="margin: 5px 0; font-size: 10px;">${data.company.address}</p>
+              <p style="margin: 5px 0; font-size: 12px;">Phone: ${data.company.phone} | Email: ${data.company.email}</p>
+              <p style="margin: 5px 0; font-size: 12px;">GSTIN: ${data.company.gstin}</p>
+            </div>
+            <div class="section" style="margin-bottom: 10px; font-size: 12px;">
+              <p><strong>Invoice No:</strong> ${data.invoice.number}</p>
+              <p><strong>Date:</strong> ${data.invoice.date}</p>
+              <p><strong>Place of Supply:</strong> ${data.invoice.placeOfSupply}</p>
+            </div>
+            <div class="section" style="margin-bottom: 10px; font-size: 12px;">
+              <p><strong>Bill To:</strong> ${data.buyer.name}</p>
+              <p>${data.buyer.address}</p>
+            </div>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 10px; font-size: 12px;">
+              <thead>
+                <tr style="background-color: #f2f2f2;">
+                  <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">#</th>
+                  <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Item</th>
+                  <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Qty</th>
+                  <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Price</th>
+                  <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${data.items.map(item => `
+                  <tr>
+                    <td style="border: 1px solid #ddd; padding: 5px;">${item.id}</td>
+                    <td style="border: 1px solid #ddd; padding: 5px;">${item.name}</td>
+                    <td style="border: 1px solid #ddd; padding: 5px;">${item.quantity}</td>
+                    <td style="border: 1px solid #ddd; padding: 5px;">₹${item.price.toFixed(2)}</td>
+                    <td style="border: 1px solid #ddd; padding: 5px;">₹${item.amount.toFixed(2)}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+            <div class="totals" style="margin-left:34mm; font-size: 12px;">
+              <p><strong>Sub Total:</strong> ₹${data.totals.subTotal.toFixed(2)}</p>
+              <p><strong>SGST:</strong> ₹${data.totals.sgst.toFixed(2)}</p>
+              <p><strong>CGST:</strong> ₹${data.totals.cgst.toFixed(2)}</p>
+              <p><strong>Round Off:</strong> ₹${data.totals.roundOff.toFixed(2)}</p>
+              <h3 style="margin-top: 10px; font-size: 14px;">Total: ₹${data.totals.total.toFixed(2)}</h3>
+            </div>
+            <div class="footer" style="margin-top: 10px; text-align: center; font-size: 12px;">
+              <p><strong>Amount in Words:</strong> ${data.totals.amountInWords}</p>
+              <p style="margin-top: 5px;">Thank you for doing business with us!</p>
+            </div>
+          </div>
+        `;
+        window.invoiceData = data; // Save data globally
+      } catch (error) {
+        console.error('Error fetching invoice data:', error);
+      }
+    }
+
+    function generateInvoice() {
+      const invoiceElement = document.getElementById('invoice');
+      const options = {
+        margin: 6,
+        filename: `Invoice_${new Date().toISOString().slice(0, 10)}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: [80, 297], orientation: 'portrait' } // 80mm width
+      };
+      html2pdf().set(options).from(invoiceElement.innerHTML).save();
+    }
+
+    function downloadExcel() {
+      const data = window.invoiceData;
+
+      if (!data || !data.items) {
+        console.error('Invoice data is not loaded yet.');
+        return;
+      }
+
+      const worksheetData = data.items.map(item => ({
+        ID: item.id,
+        Name: item.name,
+        HSN: item.hsn,
+        Quantity: item.quantity,
+        Price: `₹${item.price.toFixed(2)}`,
+        Amount: `₹${item.amount.toFixed(2)}`
+      }));
+
+      const worksheet = XLSX.utils.json_to_sheet(worksheetData);
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, 'Items');
+      XLSX.writeFile(workbook, `Items_Details_${new Date().toISOString().slice(0, 10)}.xlsx`);
+    }
+
+    fetchInvoiceData();
+  </script>
+</body>
+</html>
