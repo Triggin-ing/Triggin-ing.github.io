@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triggin - Digital Partner</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> <!-- AOS CSS for animations -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="Stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      .carousel {
+        scroll-behavior: smooth;
+      }
+      .carousel::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+
+
+</head>
+<body class=" font-sans leading-normal tracking-normal" style="background-color: #ffffff;">
+
+    <!-- Scroll Progress Bar -->
+    <div id="progress-bar"></div>
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center p-4 sm:p-6">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center space-x-1">
+              <img data-aos="zoom-out" data-aos-duration="1000" src="images/Logo.jpeg.jpg" alt="Triggin Logo" class="h-12 w-12"> <!-- Logo Image -->
+              <span class="text-xl sm:text-2xl font-bold text-gray-800">Triggin</span> <!-- Company Name -->
+          </a>
+  
+          <!-- Desktop Navigation Links -->
+          <nav class="hidden md:flex space-x-4 sm:space-x-6 ml-auto items-center">
+              <a href="triggin/contact.html" class="text-gray-600 hover:text-blue-600">Contact Us</a>
+              <a href="try.html" class="text-gray-600 hover:text-blue-600">Try Triggin</a>
+              <a href="triggin/login.html">
+                  <button class="bg-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded transition-all duration-300 transform hover:scale-105">Login</button>
+              </a>
+          </nav>
+  
+          <!-- Mobile Menu and Login -->
+          <div class="flex items-center space-x-2 md:hidden">
+              <!-- Login Button -->
+              <a href="triggin/login.html">
+                  <button class="bg-red-500 text-white px-4 py-2 rounded transition-all duration-300 transform hover:scale-105">Login</button>
+              </a>
+  
+              <!-- Mobile Menu Button (Hamburger Icon) -->
+              <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+              </button>
+          </div>
+      </div>
+  
+      <!-- Mobile Navigation Menu -->
+      <nav id="mobile-menu" class="md:hidden bg-white shadow-md hidden">
+          <div class="flex flex-col space-y-2 p-4">
+              <a href="triggin/contact.html" class="text-gray-600 hover:text-blue-600">Contact Us</a>
+              <a href="try.html" class="text-gray-600 hover:text-blue-600">Try Triggin</a>
+          </div>
+      </nav>
+  </header>
+  
+  <!-- JavaScript for Mobile Menu Toggle -->
+  <script>
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+  
+      mobileMenuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+      });
+  </script>
+  
+
+
+
+
+    <!-- Hero Section -->
+
+    <section id="hero" class=" py-16 sm:py-20" data-aos="fade-up" style="background-color:#bbdae9;">
+        <div class="container mx-auto px-4 sm:px-6 flex flex-col lg:flex-row items-center lg:items-start">
+            <!-- Left Section -->
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <h1 data-aos="fade-right" data-aos-duration="1500" class="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">
+                    Smart & Reliable
+                </h1>
+                <h2 data-aos="fade-right" data-aos-duration="1500" class="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">
+                    Digital Partner for Your Supply Chain
+                </h2>
+                <p data-aos="zoom-in" data-aos-duration="1500" class="text-base sm:text-lg text-gray-700 mb-6">
+                    An intelligent, integrated & interactive platform connecting and lubricating the supply chain ecosystem
+                </p>
+    
+                <div class="flex flex-col sm:flex-row justify-start sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="bg-red-500 text-white px-6 py-3 rounded transition-all duration-300 transform hover:scale-105">
+                        <a href="start.html">Start Free Trial</a>
+                    </button>
+                    <button class="bg-white border border-red-500 text-red-500 px-6 py-3 rounded transition-all duration-300 transform hover:scale-105">
+                        <a href="demo.html">Demo</a>
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Right Section -->
+          
+            <div class="lg:w-1/2 flex justify-center lg:justify-end mt-10 lg:mt-0">
+                <img src="images/lp.png" data-aos="zoom-in" data-aos-duration="1500" alt="Laptop and Phone Display" class="max-w-full sm:max-w-xl">
+            </div>
+        </div>
+    </section>
+
+   
+<!-- services who can use -->
+
+<section class="py-8 sm:py-10">
+  <div class="container mx-auto px-2 sm:px-4">
+    <!-- Section Heading -->
+    <div class="flex flex-col sm:flex-row justify-between items-start mb-6 sm:mb-8">
+      <h2 class="text-3xl sm:text-4xl font-bold leading-tight">
+        Services 
+        <span class="text-red-500"><a href="start.html">Triggin</a></span><br> can help you with
+      </h2>
+      <!-- <p class="text-gray-600 text-sm sm:text-base max-w-xl">
+        Manufacturers and all supply chain stakeholders ranging from C&F agents, Super Stockists, Dealers, Distributors, Stockists, Wholesalers, Retailers across any industry.
+      </p> -->
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Service Card 1 -->
+      <div class="flex items-start space-x-6 max-w-lg mx-auto">
+        <div class="icon w-16 h-16 flex-shrink-0">
+          <img src="images/6.png" alt="Retailytics Icon" class="h-full w-full object-cover">
+        </div>
+        <div class="flex-1">
+          <h3 class="text-lg font-semibold">Retailytics</h3>
+          <p class="text-gray-600 text-sm">Use AI insights to ensure products are available and keep customers happy by tracking retail trends.</p>
+        </div>
+      </div>
+
+      <!-- Service Card 2 -->
+      <div class="flex items-start space-x-6 max-w-lg mx-auto">
+        <div class="icon w-16 h-16 flex-shrink-0">
+          <img src="images/7.png" alt="Unified Ordering Icon" class="h-full w-full object-cover">
+        </div>
+        <div class="flex-1">
+          <h3 class="text-lg font-semibold">Unified Ordering Platform</h3>
+          <p class="text-gray-600 text-sm">Simplify order management by connecting suppliers, distributors, and retailers in one platform</p>
+        </div>
+      </div>
+
+      <!-- Service Card 3 -->
+      <div class="flex items-start space-x-6 max-w-lg mx-auto">
+        <div class="icon w-16 h-16 flex-shrink-0">
+          <img src="images/8.png" alt="Predictive Analytics Icon" class="h-full w-full object-cover">
+        </div>
+        <div class="flex-1">
+          <h3 class="text-lg font-semibold">Predictive Analytics</h3>
+          <p class="text-gray-600 text-sm">Predict demand, plan better, and manage inventory at different levels with smart data insights</p>
+        </div>
+      </div>
+
+      <!-- Service Card 4 -->
+      <div class="flex items-start space-x-6 max-w-lg mx-auto">
+        <div class="icon w-16 h-16 flex-shrink-0">
+          <img src="images/9.png" alt="Integrations Icon" class="h-full w-full object-cover">
+        </div>
+        <div class="flex-1">
+          <h3 class="text-lg font-semibold">Integrations</h3>
+          <p class="text-gray-600 text-sm">Easily connect systems to automate workflows and boost efficiency.</p>
+        </div>
+      </div>
+
+      <!-- Service Card 5 -->
+      <div class="flex items-start space-x-6 max-w-lg mx-auto">
+        <div class="icon w-16 h-16 flex-shrink-0">
+          <img src="images/10.png" alt="Inventory Management Icon" class="h-full w-full object-cover">
+        </div>
+        <div class="flex-1">
+          <h3 class="text-lg font-semibold">Inventory Management</h3>
+          <p class="text-gray-600 text-sm">Track stock in real-time, get alerts, and predict demand to avoid shortages or overstock.</p>
+        </div>
+      </div>
+
+      <!-- Service Card 6 -->
+      <div class="flex items-start space-x-6 max-w-lg mx-auto">
+        <div class="icon w-16 h-16 flex-shrink-0">
+          <img src="images/11.png" alt="Seller & Buyer Management Icon" class="h-full w-full object-cover">
+        </div>
+        <div class="flex-1">
+          <h3 class="text-lg font-semibold">Seller & Buyer Management</h3>
+          <p class="text-gray-600 text-sm">Handle suppliers and buyers smoothly to ensure better transactions and relationships.</p>
+        </div>
+      </div>
+
+      <!-- Service Card 7 -->
+      <div class="flex items-start space-x-6 max-w-lg mx-auto">
+        <div class="icon w-16 h-16 flex-shrink-0">
+          <img src="images/12.png" alt="Invoicing & Payments Icon" class="h-full w-full object-cover">
+        </div>
+        <div class="flex-1">
+          <h3 class="text-lg font-semibold">Invoicing & Payments</h3>
+          <p class="text-gray-600 text-sm">Automate invoicing and payments to reduce errors and ensure timely, clear financial records.</p>
+        </div>
+      </div>
+
+      <!-- Service Card 8 -->
+      <div class="flex items-start space-x-6 max-w-lg mx-auto">
+        <div class="icon w-16 h-16 flex-shrink-0">
+          <img src="images/13.png" alt="Process Automation Icon" class="h-full w-full object-cover">
+        </div>
+        <div class="flex-1">
+          <h3 class="text-lg font-semibold">Process Automation & Optimization</h3>
+          <p class="text-gray-600 text-sm">Automate tasks and optimize resources to cut delays and boost supply chain efficiency.</p>
+        </div>
+      </div>
+
+      <!-- Service Card 9 -->
+      <div class="flex items-start space-x-6 max-w-lg mx-auto">
+        <div class="icon w-16 h-16 flex-shrink-0">
+          <img src="images/14.png" alt="Data Analytics Icon" class="h-full w-full object-cover">
+        </div>
+        <div class="flex-1">
+          <h3 class="text-lg font-semibold">Supply Chain Visibility</h3>
+          <p class="text-gray-600 text-sm">Get real-time visibility of your supply chain and monitor stock levels across distribution partners.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="relative w-full overflow-hidden">
+  <!-- Carousel Container -->
+  <div id="carousel" class="flex transition-transform duration-300 ease-in-out">
+    <!-- Card Example -->
+    <div class="w-full sm:w-1/5 flex-shrink-0 p-4">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="images/SM.png" alt="Image 1" class="w-full h-48 sm:h-40 object-contain">
+        <div class="p-4">
+          <h4 class="mt-1 text-lg font-bold text-gray-800">SMEs/MSMEs</h4>
+        </div>
+      </div>
+    </div>
+    <div class="w-full sm:w-1/5 flex-shrink-0 p-4">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="images/M.png" alt="Image 2" class="w-full h-48 sm:h-40 object-contain">
+        <div class="p-4">
+          <h4 class="mt-1 text-lg font-bold text-gray-800">Manufacturers</h4>
+        </div>
+      </div>
+    </div>
+    <div class="w-full sm:w-1/5 flex-shrink-0 p-4">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="images/Dd.png" alt="Image 3" class="w-full h-48 sm:h-40 object-contain">
+        <div class="p-4">
+          <h4 class="mt-1 text-lg font-bold text-gray-800">Dealers & Distributors</h4>
+        </div>
+      </div>
+    </div>
+    <div class="w-full sm:w-1/5 flex-shrink-0 p-4">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="images/CF.png" alt="Image 4" class="w-full h-48 sm:h-40 object-contain">
+        <div class="p-4">
+          <h4 class="mt-1 text-lg font-bold text-gray-800">C&F Agents</h4>
+        </div>
+      </div>
+    </div>
+    <div class="w-full sm:w-1/5 flex-shrink-0 p-4">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="images/R.png" alt="Image 5" class="w-full h-48 sm:h-40 object-contain">
+        <div class="p-4">
+          <h4 class="mt-1 text-lg font-bold text-gray-800">Retailers</h4>
+        </div>
+      </div>
+    </div>
+    <div class="w-full sm:w-1/5 flex-shrink-0 p-4">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="images/SMB.png" alt="Image 6" class="w-full h-48 sm:h-40 object-contain">
+        <div class="p-4">
+          <h4 class="mt-1 text-lg font-bold text-gray-800">SMBs</h4>
+        </div>
+      </div>
+    </div>
+    <div class="w-full sm:w-1/5 flex-shrink-0 p-4">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="images/super.png" alt="Image 7" class="w-full h-48 sm:h-40 object-contain">
+        <div class="p-4">
+          <h4 class="mt-1 text-lg font-bold text-gray-800">Superstockist</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dots Navigation -->
+  <div id="dots" class="flex justify-center space-x-2 mt-4"></div>
+
+  <!-- Navigation Buttons -->
+  <div class="flex justify-center items-center mt-4 space-x-4">
+    <button id="prev" class="bg-gray-800 text-white p-2 rounded-full shadow-md">
+      &larr;
+    </button>
+    <button id="next" class="bg-gray-800 text-white p-2 rounded-full shadow-md">
+      &rarr;
+    </button>
+  </div>
+</section>
+
+<script>
+  const carousel = document.getElementById("carousel");
+  const dots = document.getElementById("dots");
+  const prevBtn = document.getElementById("prev");
+  const nextBtn = document.getElementById("next");
+
+  let currentIndex = 0;
+  let itemsToShow = window.innerWidth < 640 ? 1 : 5; // Default: 1 item for mobile, 5 for desktop
+  const items = document.querySelectorAll("#carousel > div");
+  const totalItems = items.length;
+
+  let startX = 0;
+  let isSwiping = false;
+  let swipeThreshold = 50; // Minimum swipe distance to trigger navigation
+  let isDragging = false;
+  let dragStartX = 0;
+  let dragOffset = 0;
+
+  // Function to update the carousel's position
+  function updateCarousel() {
+    const slideWidth = carousel.clientWidth / itemsToShow;
+    const maxIndex = totalItems - itemsToShow; // Max starting index
+    currentIndex = Math.max(0, Math.min(currentIndex, maxIndex)); // Ensure index stays within bounds
+    const offset = -(currentIndex * slideWidth);
+    carousel.style.transform = `translateX(${offset}px)`;
+
+    // Update dots
+    const activeDotIndex = currentIndex + Math.floor(itemsToShow / 2);
+    Array.from(dots.children).forEach((dot, index) => {
+      dot.classList.toggle("bg-gray-800", index === activeDotIndex);
+      dot.classList.toggle("bg-gray-400", index !== activeDotIndex);
+    });
+  }
+
+  // Create dots
+  function createDots() {
+    dots.innerHTML = "";
+    for (let i = 0; i < totalItems; i++) {
+      const dot = document.createElement("button");
+      dot.classList.add("w-2", "h-2", "rounded-full", "bg-gray-400");
+      dots.appendChild(dot);
+    }
+    updateCarousel();
+  }
+
+  // Handle resizing
+  window.addEventListener("resize", () => {
+    itemsToShow = window.innerWidth < 640 ? 1 : 5;
+    updateCarousel();
+  });
+
+  // Event listeners for navigation buttons
+  prevBtn.addEventListener("click", () => {
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = totalItems - itemsToShow; // Wrap to the end
+    }
+    updateCarousel();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex++;
+    if (currentIndex > totalItems - itemsToShow) {
+      currentIndex = 0; // Wrap back to the start
+    }
+    updateCarousel();
+  });
+
+  // Swipe functionality
+  carousel.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    isSwiping = true;
+  });
+
+  carousel.addEventListener("touchmove", (e) => {
+    if (!isSwiping) return;
+    const currentX = e.touches[0].clientX;
+    const diff = currentX - startX;
+
+    // Add slight translation during swipe for visual feedback
+    const slideWidth = carousel.clientWidth / itemsToShow;
+    const offset = -(currentIndex * slideWidth) + diff;
+    carousel.style.transition = "none";
+    carousel.style.transform = `translateX(${offset}px)`;
+  });
+
+  carousel.addEventListener("touchend", (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = endX - startX;
+    isSwiping = false;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      // Determine swipe direction
+      if (diff > 0) {
+        currentIndex--; // Swipe right
+      } else {
+        currentIndex++; // Swipe left
+      }
+    }
+
+    // Restore transition and update carousel
+    carousel.style.transition = "transform 0.3s ease-in-out";
+    updateCarousel();
+  });
+
+  // Drag functionality for larger screens
+  carousel.addEventListener("mousedown", (e) => {
+    if (window.innerWidth < 640) return; // Disable drag for smaller screens
+    isDragging = true;
+    dragStartX = e.clientX;
+    carousel.style.transition = "none";
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    const diff = e.clientX - dragStartX;
+    const slideWidth = carousel.clientWidth / itemsToShow;
+    dragOffset = -(currentIndex * slideWidth) + diff;
+    carousel.style.transform = `translateX(${dragOffset}px)`;
+  });
+
+  window.addEventListener("mouseup", () => {
+    if (!isDragging) return;
+    isDragging = false;
+    const slideWidth = carousel.clientWidth / itemsToShow;
+    const diff = dragOffset + currentIndex * slideWidth;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        currentIndex--;
+      } else {
+        currentIndex++;
+      }
+    }
+
+    carousel.style.transition = "transform 0.3s ease-in-out";
+    updateCarousel();
+  });
+
+  // Initialize
+  createDots();
+  updateCarousel();
+</script>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+
+    </script>
+</body>
+<br>
+
+<body class="bg-white-100">
+
+    <!-- Scroll Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-blue-500" id="progress-bar"></div>
+
+    <!-- Section 1 -->
+    <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-start bg-green-50 rounded-xl shadow-md space-y-6 lg:space-y-0 lg:space-x-6" style="animation: fadeIn 1s ease-in-out;">
+        <!-- Image on Left -->
+        <!-- <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0 hover:animate-spin" style="animation: slideIn 1s ease-in-out;">
+            <img src="images/12.png" alt="App Screenshot" class="w-full lg:w-3/4">
+        </div> -->
+        <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0" style="animation: pulseEffect 4s infinite ease-in-out;">
+          <img src="images/A.png" alt="App Screenshot" class="w-full lg:w-3/4 hover-zoom">
+      </div>
+      
+      <!-- <style>
+          @keyframes pulseEffect {
+              0%, 100% {
+                  transform: scale(0.8); /* Smaller size */
+              }
+              50% {
+                  transform: scale(1.2); /* Larger size */
+              }
+          }
+      </style> -->
+      
+        <!-- Text Content on Right -->
+        <div class="lg:w-1/2 lg:pl-8">
+            <p class="text-gray-500 uppercase text-xs sm:text-sm font-semibold mb-2">Analytics</p>
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4">Accessible Anytime Anywhere.</h2>
+            <p class="text-gray-700 mb-6">Manage your supply chain from anywhere, at any time, with a platform that’s accessible across devices, ensuring you stay connected.</p>
+            
+            <!-- Features List -->
+            <div class="space-y-4">
+              <!-- Feature 1 -->
+              <div class="flex items-center">
+                <div class="icon-bg mr-4">
+                  <img src="images/17.png" alt="Cloud-based platform Icon" class="w-12 h-12 object-contain">
+                </div>
+                <h3 class="text-lg font-medium">Cloud-based platform with mobile access</h3>
+              </div>
+            
+              <!-- Feature 2 -->
+              <div class="flex items-center">
+                <div class="icon-bg mr-4">
+                  <img src="images/18.png" alt="Real-time updates Icon" class="w-12 h-12 object-contain">
+                </div>
+                <h3 class="text-lg font-medium">Real-time updates for on-the-go decision-making</h3>
+              </div>
+            
+              <!-- Feature 3 -->
+              <div class="flex items-center">
+                <div class="icon-bg mr-4">
+                  <img src="images/19.png" alt="24/7 support Icon" class="w-12 h-12 object-contain">
+                </div>
+                <h3 class="text-lg font-medium">24/7 support for uninterrupted operations</h3>
+              </div>
+            </div>
+            
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-center bg-blue-50 rounded-xl shadow-md space-y-6 lg:space-y-0 lg:space-x-6" style="animation: fadeIn 1s ease-in-out;">
+      <!-- Image on Left -->
+      <!-- <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0" style="animation: slideIn 1s ease-in-out;">
+          <img src="images/14.png" alt="Analytics Image" class="w-full lg:w-3/4">
+      </div> -->
+      <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0" style="animation: pulseEffect 4s infinite ease-in-out;">
+        <img src="images/B.png" alt="App Screenshot" class="w-full lg:w-3/4 hover-zoom">
+    </div>
+    
+    <!-- <style>
+        @keyframes pulseEffect {
+            0%, 100% {
+                transform: scale(0.8); /* Smaller size */
+            }
+            50% {
+                transform: scale(1.2); /* Larger size */
+            }
+        }
+    </style> -->
+  
+      <!-- Text Content on Right -->
+      <div class="lg:w-1/2">
+          <p class="text-gray-500 font-semibold mb-2">Collaborate</p>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">Break free from Manual order processing</h2>
+          <p class="text-gray-700 mb-6">Say goodbye to manual processes with automation that streamlines order management, reduces errors, and saves time</p>
+          
+          
+         <!-- Features List -->
+         <div class="grid grid-cols-2 gap-4">
+          <!-- Column 1 -->
+          <div>
+            <div class="flex items-center">
+              <div class="text-green-500 text-xl font-bold mr-4">✔</div>
+              <h3 class="text-sm font-medium">Automated order processing and fulfillment </h3>
+            </div>
+            <div class="flex items-center mt-4">
+              <div class="text-green-500 text-xl font-bold mr-4">✔</div>
+              <h3 class="text-sm font-medium">Reduced paperwork and manual entry</h3>
+            </div>
+            <!-- <div class="flex items-center mt-4">
+              <div class="text-green-500 text-xl font-bold mr-4">✔</div>
+              <h3 class="text-lg font-medium"></h3>
+            </div> -->
+          </div>
+          <!-- Column 2 -->
+          <div>
+            <div class="flex items-center">
+              <div class="text-green-500 text-xl font-bold mr-4">✔</div>
+              <h3 class="text-sm font-medium">Intelligent delivery routing options</h3>
+            </div>
+            <div class="flex items-center mt-4">
+              <div class="text-green-500 text-xl font-bold mr-4">✔</div>
+              <h3 class="text-sm font-medium">Streamline returns & replacements</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+   
+<br>
+
+  <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-center bg-pink-50 rounded-xl shadow-md space-y-6 lg:space-y-0 lg:space-x-6" style="animation: fadeIn 1s ease-in-out;">
+    <!-- Image on Left -->
+    <!-- <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0" style="animation: slideIn 1s ease-in-out;">
+        <img src="images/14.png" alt="Analytics Image" class="w-full lg:w-3/4">
+    </div> -->
+    <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0" style="animation: pulseEffect 4s infinite ease-in-out;">
+      <img src="images/U.png" alt="App Screenshot" class="w-full lg:w-3/4 hover-zoom">
+  </div>
+  
+  <!-- <style>
+      @keyframes pulseEffect {
+          0%, 100% {
+              transform: scale(0.8); /* Smaller size */
+          }
+          50% {
+              transform: scale(1.2); /* Larger size */
+          }
+      }
+  </style> -->
+
+    <!-- Text Content on Right -->
+    <div class="lg:w-1/2">
+        <p class="text-gray-500 font-semibold mb-2">Analytics</p>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Unified Platform for Buyers & Sellers</h2>
+        <p class="text-gray-700 mb-6">Bridge the gap between buyers and sellers with a fully integrated platform that fosters collaboration and enhances communication.</p>
+        
+        <!-- Features List -->
+        <div class="space-y-4">
+            <div class="flex items-start">
+                <span class="text-yellow-500 text-2xl mr-2">📊</span>
+                <div>
+                    <p class="text-gray-600">Centralized platform for managing orders and procurement</p>
+                </div>
+            </div>
+
+            <div class="flex items-start">
+                <span class="text-blue-500 text-2xl mr-2">🔄</span>
+                <div>
+                  
+                    <p class="text-gray-600">Seamless communication and order tracking</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+              <span class="text-blue-500 text-2xl mr-2">🔄</span>
+              <div>
+                
+                  <p class="text-gray-600">Automated purchase requests & Approvals</p>
+              </div>
+          </div>
+        </div>
+    </div>
+</section>
+  
+<br>
+    <section class="max-w-6xl mx-auto p-6 sm:p-8 flex flex-col lg:flex-row items-center bg-purple-100 rounded-xl shadow-md space-y-6 lg:space-y-0 lg:space-x-6" style="animation: fadeIn 1s ease-in-out;">
+      <!-- Image on Left -->
+      <!-- <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0" style="animation: slideIn 1s ease-in-out;">
+          <img src="images/14.png" alt="Analytics Image" class="w-full lg:w-3/4">
+      </div> -->
+      <div class="lg:w-1/2 flex justify-center lg:justify-start mb-6 lg:mb-0" style="animation: pulseEffect 4s infinite ease-in-out;">
+        <img src="images/S.png" alt="App Screenshot" class="w-full lg:w-3/4 hover-zoom">
+    </div>
+    
+    <!-- <style>
+        @keyframes pulseEffect {
+            0%, 100% {
+                transform: scale(0.8); /* Smaller size */
+            }
+            50% {
+                transform: scale(1.2); /* Larger size */
+            }
+        }
+    </style> -->
+  
+      <!-- Text Content on Right -->
+      <div class="lg:w-1/2">
+          <p class="text-gray-500 font-semibold mb-2">Analytics</p>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">Streamline your operational workflow</h2>
+          <p class="text-gray-700 mb-6">Optimize your supply chain with intelligent solutions that simplify tasks, speed up approvals, and enhance efficiency across procurement, inventory, and fulfillment.</p>
+          
+          
+          <!-- Features List -->
+          <div class="grid grid-cols-2 gap-4">
+            <!-- Column 1 -->
+            <div>
+              <div class="flex items-center">
+                <div class="text-green-500 text-xl font-bold mr-4">✔</div>
+                <h3 class="text-sm font-medium">One-Click Procurement & Approval System </h3>
+              </div>
+              <div class="flex items-center mt-4">
+                <div class="text-green-500 text-xl font-bold mr-4">✔</div>
+                <h3 class="text-sm font-medium">Integrated Inventory Management</h3>
+              </div>
+              <!-- <div class="flex items-center mt-4">
+                <div class="text-green-500 text-xl font-bold mr-4">✔</div>
+                <h3 class="text-lg font-medium"></h3>
+              </div> -->
+            </div>
+            <!-- Column 2 -->
+            <div>
+              <div class="flex items-center">
+                <div class="text-green-500 text-xl font-bold mr-4">✔</div>
+                <h3 class="text-sm font-medium">Optimized Shipping & Logistics</h3>
+              </div>
+              <div class="flex items-center mt-4">
+                <div class="text-green-500 text-xl font-bold mr-4">✔</div>
+                <h3 class="text-sm font-medium">Improved synergy across teams</h3>
+              </div>
+            </div>
+          </div>
+      </div>
+  </section>
+
+    <!-- Animation Script and Styles -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+</body>
+<br>
+<body style="font-family: Arial, sans-serif; background-color: #ffffff; padding: 20px;">
+
+    <!-- Testimonials Section -->
+    <section style="text-align: center; margin-bottom: 30px;">
+        <h2 style="color: #b0b0b0;">Some of Our Happy Customer Reviews</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
+            
+            <!-- Burger King Testimonial -->
+            <div style="background-color: white; padding: 20px; border-radius: 10px; width: 100%; max-width: 450px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <img src="images/22.png" style="width: 40px; margin-right: 10px;">
+                    <h3 style="color: red; margin: 0;">Burger King</h3>
+                </div>
+                <p style="color: #333; text-align: justify; line-height: 1.6;">
+                    I received great customer service from the specialists who helped me. I would recommend to anyone who wants great service that has great quality.
+                </p>
+                <div style="display: flex; align-items: center; margin-top: 20px;">
+                  <div style="width: 40px; height: 40px; border-radius: 50%; overflow: hidden;">
+                    <img src="images/profile.webp" alt="Profile" style="width: 100%; height: 100%; object-fit: cover;">
+                  </div>
+                    <div style="margin-left: 10px;">
+                        <p style="margin: 0; font-weight: bold;">Harold Tyler</p>
+                        <p style="margin: 0; color: #b0b0b0;">Business head</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nestle Testimonial -->
+            <div style="background-color: white; padding: 20px; border-radius: 10px; width: 100%; max-width: 450px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <img src="images/23.png" style="width: 40px; margin-right: 10px;">
+                    <h3 style="color: black; margin: 0;">Nestlé</h3>
+                </div>
+                <p style="color: #333; text-align: justify; line-height: 1.6;">
+                    My experience with this platform so far has been great. Everything is easy, from creating visualization, scheduling, collaboration, and many more.
+                </p>
+                <div style="display: flex; align-items: center; margin-top: 20px;">
+                  <div style="width: 40px; height: 40px; border-radius: 50%; overflow: hidden;">
+                    <img src="images/profile.webp" alt="Profile" style="width: 100%; height: 100%; object-fit: cover;">
+                  </div>
+                    <div style="margin-left: 10px;">
+                        <p style="margin: 0; font-weight: bold;">Ryan Holmes</p>
+                        <p style="margin: 0; color: #b0b0b0;">Marketing</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- <a href="#" style="color: #7a5eff; text-decoration: none; font-weight: bold;">See All Testimonials</a> -->
+    </section>
+
+  
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f4f8;">
+
+    <!-- Footer Section -->
+    <!-- <footer style="background-color:#e1ebf9; padding: 40px 20px;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
+             -->
+            <!-- Left Side: Brand and Social Media -->
+            <!-- <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                <h3 style="color: #ff5b5b; margin-bottom: 20px;">Triggin</h3>
+                <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                    <a href="#"><img src="images/5.png" alt="Twitter" style="width: 25px;"></a>
+                    <a href="#"><img src="images/13.png" alt="Facebook" style="width: 25px;"></a>
+                    <a href="#"><img src="images/10.png" alt="LinkedIn" style="width: 25px;"></a>
+                </div>
+                <p style="color: #7d7d7d;">© 2019 Oval</p>
+            </div> -->
+
+            <!-- Navigation Links -->
+            <!-- <div style="display: flex; flex: 2; gap: 20px; flex-wrap: wrap;"> -->
+                
+                <!-- Product Column -->
+                <!-- <div style="flex: 1; min-width: 150px;">
+                    <h4 style="margin-bottom: 15px;">Product</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="text-decoration: none; color: #7d7d7d; display: block; margin-bottom: 8px;">Landingpage</a></li>
+                        <li><a href="#" style="text-decoration: none; color: #7d7d7d; display: block; margin-bottom: 8px;">Features</a></li>
+                        <li><a href="#" style="text-decoration: none; color: #7d7d7d; display: block; margin-bottom: 8px;">Documentation</a></li>
+                        <li><a href="#" style="text-decoration: none; color: #7d7d7d; display: block; margin-bottom: 8px;">Referral Program</a></li>
+                        <li><a href="#" style="text-decoration: none; color: #7d7d7d; display: block; margin-bottom: 8px;">Pricing</a></li>
+                    </ul>
+                </div> -->
+
+                <!-- Services Column -->
+                <!-- <div style="flex: 1; min-width: 150px;">
+                    <h4 style="margin-bottom: 15px;">Services</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="text-decoration: none; color: #7d7d7d; display: block; margin-bottom: 8px;">Address</a></li>
+                        <li><a href="#" style="text-decoration: none; color: #7d7d7d; display: block; margin-bottom: 8px;">Contact Us</a></li>
+                        <li><a href="#" style="text-decoration: none; color: #7d7d7d; display: block; margin-bottom: 8px;">Try Demo for free</a></li>
+
+                    </ul>
+                </div> -->
+
+                <!-- Company Column -->
+                <!-- <div style="flex: 1; min-width: 150px;">
+                    <h4 style="margin-bottom: 15px;">Company</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="text-decoration: none; color: #7d7d7d; display: block; margin-bottom: 8px;">About</a></li>
+                        <li><a href="#" style="text-decoration: none; color: #7d7d7d; display: block; margin-bottom: 8px;">Terms</a></li>
+                        <li><a href="#" style="text-decoration: none; color: #7d7d7d; display: block; margin-bottom: 8px;">Privacy Policy</a></li>
+                        <li><a href="#" style="text-decoration: none; color: #7d7d7d; display: block; margin-bottom: 8px;">Careers</a></li>
+                    </ul>
+                </div> -->
+
+                <!-- More Column -->
+                <!-- <div style="flex: 1; min-width: 150px;">
+                    <h4 style="margin-bottom: 15px;">More</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="text-decoration: none; color: #7d7d7d; display: block; margin-bottom: 8px;">Documentation</a></li>
+                        <li><a href="#" style="text-decoration: none; color: #7d7d7d; display: block; margin-bottom: 8px;">License</a></li>
+                        <li><a href="#" style="text-decoration: none; color: #7d7d7d; display: block; margin-bottom: 8px;">Changelog</a></li>
+                    </ul>
+                </div> -->
+            <!-- </div>
+        </div>
+    </footer> -->
+    <footer style="background-color: #8b8989; padding: 10px 20px; color: #fff; font-family: Arial, sans-serif; font-size: 14px;">
+      <div style="text-align: center; max-width: 1200px; margin: 0 auto;">
+          
+          <!-- Social Media Icons -->
+          <!-- <div style="margin-bottom: 20px;">
+            <a href="#" style="margin: 5px 10px; display: inline-block;">
+                <img src="images/5.png" alt="Twitter" style="width: 40px; height: 40px; border-radius: 50%;">
+            </a>
+            <a href="#" style="margin: 5px 10px; display: inline-block;">
+                <img src="images/13.png" alt="Facebook" style="width: 40px; height: 40px; border-radius: 50%;">
+            </a>
+            <a href="#" style="margin: 5px 10px; display: inline-block;">
+                <img src="images/10.png" alt="LinkedIn" style="width: 40px; height: 40px; border-radius: 50%;">
+            </a>
+          </div>
+           -->
+          
+          <!-- Navigation Links -->
+          <div style="margin-bottom: 20px;">
+              <a href="#" style="color: #bbb; text-decoration: none; margin: 0 15px;font-size: large;">Terms and Conditions</a>
+              <a href="#" style="color: #bbb; text-decoration: none; margin: 0 15px; font-size: large;">Contact us</a>
+              <!-- <a href="#" style="color: #bbb; text-decoration: none; margin: 0 15px;">Content Guide</a> -->
+              <a href="/triggin/contact.html" style="color: #bbb; text-decoration: none; margin: 0 15px;font-size: large;">Address</a>
+              <!-- <a href="#" style="color: #bbb; text-decoration: none; margin: 0 15px;">Terms of Use</a> -->
+              <!-- <a href="#" style="color: #bbb; text-decoration: none; margin: 0 15px;">Advertising</a> -->
+              <!-- <a href="#" style="color: #bbb; text-decoration: none; margin: 0 15px;">Jobs</a> -->
+          </div>
+          
+          <!-- "Made with Love" and Ownership -->
+          <div style="margin-bottom: 20px; color: #bbb;">
+              <p style="margin: 0;">Made with ❤ from Hyderabad</p>
+              <p style="margin: 0;">Owned by Triggin Analytics</p>
+          </div>
+          </div>
+      </div>
+  </footer>
+    
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset:1,
+    } );
+    </script>
+</body>
+</html>
